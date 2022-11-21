@@ -5,13 +5,16 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
-{
-  path: 'new-arival' ,loadChildren: ()=>
-    import ('./new-arival/new-arival.module').then(m => m.NewArivalModule)
-},
-  { path: 'order', loadChildren: () => 
-      import('./order/order.module').then(m => m.OrderModule) 
-  }
+	{ path: 'home', component: HomePageComponent},
+	{
+		path: 'new-arival' ,loadChildren: ()=>
+		import ('./new-arival/new-arival.module').then(m => m.NewArivalModule)
+	},
+	{ path: 'order', loadChildren: () => 
+		import('./order/order.module').then(m => m.OrderModule) 
+	},
+	{ path: '', redirectTo: '/home', pathMatch: 'full'},
+	{ path: '**', component: PageNotFoundComponent},
 ];
 
 @NgModule({
