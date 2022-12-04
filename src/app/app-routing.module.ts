@@ -18,6 +18,10 @@ const routes: Routes = [
 		path: 'order', loadChildren: () =>
 			import('./order/order.module').then(m => m.OrderModule)
 	},
+	{
+		path: 'about', loadChildren: () =>
+			import('./about/about.module').then(m => m.AboutModule)
+	},
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },
 ];
