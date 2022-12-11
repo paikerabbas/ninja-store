@@ -10,7 +10,6 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 import { LoginPageComponent } from './core/login-page/login-page.component';
 import { ToolbarComponent } from './core/toolbar/toolbar.component';
 import { NotificationComponent } from './core/notification/notification.component';
-import { CartComponent } from './core/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { CartComponent } from './core/cart/cart.component';
     LoginPageComponent,
     ToolbarComponent,
     NotificationComponent,
-    CartComponent, 
-   ],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule
