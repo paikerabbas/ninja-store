@@ -11,6 +11,11 @@ const routes: Routes = [
 	{ path: 'notification', component: NotificationComponent },
 	{ path: 'customer-care', component: CustomerCareComponent },
 	{
+		path: 'cart', loadChildren: () =>
+			import('./cart/cart.module').then(m => m.CartModule)
+	},
+
+	{
 		path: 'new-arival', loadChildren: () =>
 			import('./new-arival/new-arival.module').then(m => m.NewArivalModule)
 	},
@@ -21,6 +26,10 @@ const routes: Routes = [
 	{
 		path: 'about', loadChildren: () =>
 			import('./about/about.module').then(m => m.AboutModule)
+	},
+	{
+		path: 'career', loadChildren: () =>
+			import('./career/career.module').then(m => m.CareerModule)
 	},
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },

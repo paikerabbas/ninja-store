@@ -20,8 +20,8 @@ import { NotificationComponent } from './core/notification/notification.componen
     PageNotFoundComponent,
     LoginPageComponent,
     ToolbarComponent,
-    NotificationComponent, 
-   ],
+    NotificationComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule

@@ -117,6 +117,8 @@
                 <hr class="dropdown-divider">
               </li>
               <li><a class="dropdown-item" [routerLink]="'/customer-care'">24X7 Customer</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/cart'">Cart</a></li>
+
               <li><a class="dropdown-item" [routerLink]="'/order'">Orders</a></li>
               <li><a class="dropdown-item" [routerLink]="['/new-arival']">new arival</a></li>
 
@@ -125,7 +127,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Cart
+            <a class="nav-link" [routerLink]="'/cart'">Cart
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor" class="bi bi-cart3"
                 viewBox="0 0 16 16">
                 <path
@@ -147,7 +149,7 @@
           <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
 
           <li class="nav-item"><a class="nav-link" href="#">Wishlist</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="'/cart'">Cart</a></li>
         </ul>
 
       </div>
