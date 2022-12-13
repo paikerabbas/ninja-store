@@ -1,0 +1,41 @@
+
+.dashboard {
+    position: relative;
+    min-height: 75vh !important;
+    .caption{
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        > *{
+            text-align: center;
+        }
+    }
+}
+
+.career-wallpaper{
+    background-image: url(../assets/images/1.jpg);   
+}
+
+.main-content{
+    padding: 100px 50px;
+    box-shadow:  0px 0px 5px 0px;
+    border-radius: 16px;
+    margin-top: -100px;
+    
+}
+
+.top-color{
+    background-image: linear-gradient(#d2d9de , white 95%);
+}
+
+.career-opportunity{
+    > *{
+        text-align: center;
+    }
+
+    svg{
+        color: var(--m-green);
+    }
+}
