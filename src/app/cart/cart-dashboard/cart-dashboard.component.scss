@@ -1,0 +1,27 @@
+
+
+
+.table-shopping{
+
+    .img-container{
+        width: 120px;
+        max-height: 160px;
+        overflow: hidden;
+        display: block;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .td-name{
+      
+        a{
+              font-weight: 400;
+            font-size: 1.5em;
+            line-height: 1.42857143;
+            text-decoration: none;
+            color: #9c27b0;;
+        }
+    }
+}
