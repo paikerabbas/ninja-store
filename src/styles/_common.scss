@@ -6,3 +6,11 @@
     font-size: 1.25rem;
     line-height: 1.375;
 }
+
+.flex-row-2{
+    display: flex;
+    >div {
+        -ms-flex: 1;  /* IE 10 */  
+        flex: 1;
+    }
+}
