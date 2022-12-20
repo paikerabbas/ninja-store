@@ -31,6 +31,10 @@ const routes: Routes = [
 		path: 'career', loadChildren: () =>
 			import('./career/career.module').then(m => m.CareerModule)
 	},
+	{
+		path: 'work-with-us', loadChildren: () =>
+			import('./work-with-us/work-with-us.module').then(m => m.WorkWithUsModule)
+	},
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },
 ];
