@@ -3,7 +3,40 @@
     
 
 }
-.career{
-    margin: 20px 25px 20px 25px;
-    border-radius: 8px 8px 8px 8px;
+.carousel-item{
+    .left{
+		width: 40%;
+		left: 15px;
+		top: 100px;
+		p{
+			font-size: 1.3rem;
+		}
+    }
+    .right{
+		width: 40%;
+		right: 15px;
+		top: 100px;
+		left: auto;
+    }
+}
+
+.career-apply{
+	margin-left: -62px;
+    margin-right: -62px;
+	min-height: 150px;
+	background-image: url('../../../assets/images/career/career1.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+
+}
+
+.career-card{
+	
+min-height: 500px;
+	.card-img-overlay{
+		top:auto;
+		bottom: 15px;
+	}
+	
+	
 }
