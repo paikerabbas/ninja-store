@@ -1,0 +1,29 @@
+
+.card-container{
+        padding: 50px;
+}
+.ninja-card{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 24px 2px rgb(0 0 0 / 0%), 0 6px 30px 5px rgb(0 0 0 / 8%), 0 8px 10px -5px rgb(0 0 0 / 8%);;
+    transition: all 0.3s;
+    h2, p{
+        padding: 15px;
+    }
+
+    img{
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    p{
+        padding-top: 0;
+    }
+
+    &:hover{
+    box-shadow:  0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+        
+    }
+}
