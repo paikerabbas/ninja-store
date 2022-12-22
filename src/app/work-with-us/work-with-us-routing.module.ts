@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { WorkDashboardComponent } from './work-dashboard/work-dashboard.component';
 
 const routes: Routes = [
-  {path: '', component:WorkDashboardComponent}
+  { path: '', component: WorkDashboardComponent }
 ];
 
 @NgModule({
