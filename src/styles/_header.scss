@@ -1,65 +1,77 @@
-.bd-navbar{
-    padding: 0.75rem 0;
-    background-color: transparent;
+.bd-navbar {
+    position: fixed;
+    padding: 2rem 0;
+    z-index: 3;
+    width: 100%;
+    background-color: none;
     // background-image: linear-gradient(to bottom, rgba(var(--m-green-rgb), 1), rgba(var(--m-green-rgb, 0.95)));
-    // box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(0,0,0, 0.15);
+    // box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    transition: padding 0.5s ease-out, background-color 0.2s;
 
-    .offcanvas-lg{
+    .offcanvas-lg {
         background-color: var(--m-green);
         border-left: 0;
     }
 
-    .navbar-toggler{
+    .navbar-toggler {
         padding: 0;
         margin-right: -0.5rem;
         border: 0;
-        &:focus{
+
+        &:focus {
             box-shadow: none;
         }
 
-        &:first-child{
+        &:first-child {
             margin-left: -0.5rem;
         }
     }
 
-    .navbar-toggler, 
-    .nav-link{
+    .navbar-toggler,
+    .nav-link {
         padding-right: 0.25rem;
         padding-left: 0.25rem;
-        color: rgba(255,255,255, 0.85);
+        color: rgba(255, 255, 255, 0.85);
     }
 
 }
 
-.bd-gutter{
-    --bs-gutter-x:3rem;
+.scroll {
+    padding: 0.75rem 0;
+    background-color: rgb(var(--m-green-rgb));
+    // background-image: linear-gradient(to bottom, rgba(var(--m-green-rgb), 1), rgba(var(--m-green-rgb, 0.95)));
+    // box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
 
-.ninja-navbar-container{
-    form{
+.bd-gutter {
+    --bs-gutter-x: 3rem;
+}
+
+.ninja-navbar-container {
+    form {
         width: 50%;
     }
 }
 
 
-@media(max-width: 991.98px){
+@media(max-width: 991.98px) {
     .bd-navbar {
-        .bd-navbar-toggle{
+        .bd-navbar-toggle {
             width: 4.25rem;
         }
     }
 
-    .ninja-navbar-container{
-       flex-grow: 0 !important;
+    .ninja-navbar-container {
+        flex-grow: 0 !important;
     }
-    
+
 }
 
-@media(max-width: 1199.98px){
-    .ninja-navbar-container{
-        form{
+@media(max-width: 1199.98px) {
+    .ninja-navbar-container {
+        form {
             width: 70%;
         }
     }
-    
+
 }
