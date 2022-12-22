@@ -9,10 +9,12 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 import { LoginPageComponent } from './core/login-page/login-page.component';
 import { ToolbarComponent } from './core/toolbar/toolbar.component';
 import { NotificationComponent } from './core/notification/notification.component';
+import { HeaderComponent } from './core/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     FooterComponent,
     HomePageComponent,
     PageNotFoundComponent,
