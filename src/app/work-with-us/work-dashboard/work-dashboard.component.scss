@@ -1,0 +1,57 @@
+.mask{
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transform: translate(10%, 40%);
+    .h2{
+        font-weight: 600;
+        font-family: Roboto Slab,sans-serif;
+    }
+    > *{
+        text-align:left;
+    }
+}
+.my-work{
+    box-shadow:  0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 0px 10px -5px rgb(0 0 0 / 20%);
+    border-radius: 6px;
+    border-width: 0px;
+}
+.head{
+    color: black;
+    font-weight: 600;
+    font-family: Roboto Slab,sans-serif;
+    margin-top: 80px;
+    margin-left: 30px;
+    p{
+        font-size: 200;
+        font-weight: 200;
+        color: gray;
+    }
+
+}
+.mid{
+    text-align: center;
+    vertical-align: middle;
+    
+    .heading{
+        font-weight: 600;
+        font-family: Roboto Slab,sans-serif;
+    }
+}
+.py-5{
+    padding-top: 5rem!important;
+    padding-bottom: 3rem!important;
+    h3{
+        font-weight: 600;
+        font-family: Roboto Slab,sans-serif;
+    }
+   
+}
+.font-bold{
+    font-weight: 600;
+    .me-2{
+        margin-right: .5rem!important;
+        font-size: 1.5rem;
+    }
+}
