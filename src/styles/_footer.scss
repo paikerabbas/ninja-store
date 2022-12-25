@@ -31,20 +31,33 @@
     margin-bottom: 0px;
 
     .data{
-        text-decoration: none;
+       
         margin-bottom: 15px;
         .size{
             font-size: 12px;
             color: #999;
         }
-        &:hover{
-            text-decoration: underline;
-        }
+       
     }
     .pa{
         font-size: 12px;
         color: #999;
     }
     
+}
+
+.footer-list{
+    .list-group-item{
+        background-color:#232F3E ;
+        border: none;
+        text-align: center;
+        a{
+            text-decoration: none;
+            color: white;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
