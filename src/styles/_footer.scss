@@ -12,10 +12,20 @@
     background-color: var(--m-gray-dark);
 }
 
+.footer-part-1{
+    background-color:#232F3E ;
+}
+
+.footer-part-2{
+     background-color:#131a22 ;
+}
+
 .country-list{
     text-align: center;
     padding: 15px 0;
-    color: white;
+    a{
+        color: white ;
+    }
 
     .name{
         text-decoration: none;
