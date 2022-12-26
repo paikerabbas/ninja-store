@@ -15,6 +15,7 @@
 .country-list{
     text-align: center;
     padding: 15px 0;
+    color: white;
 
     .name{
         text-decoration: none;
@@ -49,6 +50,20 @@
 .footer-list{
     .list-group-item{
         background-color:#232F3E ;
+        border: none;
+        text-align: center;
+        a{
+            text-decoration: none;
+            color: white;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.footer-list-2{
+    .list-group-item{
+        background-color:#131a22 ;
         border: none;
         text-align: center;
         a{
