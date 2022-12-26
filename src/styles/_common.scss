@@ -1,22 +1,44 @@
-.h4, .h5, .h6, h4, h5, h6 {
+.h4,
+.h5,
+.h6,
+h4,
+h5,
+h6 {
     font-weight: 600;
 }
 
-.h5, h5 {
+.h5,
+h5 {
     font-size: 1.25rem;
     line-height: 1.375;
 }
 
-.flex-row-2{
+.flex-row-2 {
     display: flex;
+
     >div {
-        -ms-flex: 1;  /* IE 10 */  
+        -ms-flex: 1;
+        /* IE 10 */
         flex: 1;
     }
 }
 
+.cart-button {
+    background-color: var(--m-green);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px !important;
+}
 
-.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
     padding: 12px 8px;
     vertical-align: middle;
     border-color: #ddd;
@@ -25,26 +47,29 @@
 
 
 
-.img-br8-shadow{
-    box-shadow:  0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 0px 10px -5px rgb(0 0 0 / 20%);
-    img{
+.img-br8-shadow {
+    box-shadow: 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 0px 10px -5px rgb(0 0 0 / 20%);
+
+    img {
         border-radius: 8px;
     }
 }
 
-.img-br8{
-    img{
+.img-br8 {
+    img {
         border-radius: 8px;
     }
 }
-.glow{
-    img{
+
+.glow {
+    img {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin-top: -25px;
     }
 }
-.skyblue{
-    p{
+
+.skyblue {
+    p {
         color: #1a73e8;
     }
 }
