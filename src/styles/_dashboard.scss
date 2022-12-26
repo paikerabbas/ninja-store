@@ -17,6 +17,9 @@
 .career-wallpaper{
     background-image: url(../assets/images/1.jpg);   
 }
+.about-wallpaper{
+    background-image: url(../assets/images/3.jpg);
+}
 
 .main-content{
     padding: 100px 50px;
@@ -44,4 +47,9 @@
     svg{
         color: var(--m-green);
     }
+}
+
+ .full-width-row{
+	margin-left: -50px;
+   margin-right: -50px;
 }
