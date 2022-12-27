@@ -8,6 +8,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   isScrolled = false;
+  isScrolled0 = false;
   num = 0;
   constructor() { }
 
@@ -18,7 +19,8 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll() {
-    window.pageYOffset >= 100 ? (this.isScrolled = true) : (this.isScrolled = false);
+    window.scrollY >= 100 ? (this.isScrolled = true) : (this.isScrolled = false);
+    window.scrollY >= 100 ? (this.isScrolled0 = true) : (this.isScrolled0 = false);
     this.num = window.pageYOffset;
   }
 
