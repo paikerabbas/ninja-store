@@ -1,0 +1,58 @@
+.discount {
+    padding: 50px;
+    background-color: var(--m-green);
+
+    h1,
+    p,
+    .discount-btn {
+        text-align: center;
+        color: white;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .discount-btn {
+        button {
+            border: 2px solid white;
+            background: var(--m-green);
+            color: white;
+            padding: 8px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 30px;
+            transition: all 0.3s;
+
+            &:hover {
+                background: white;
+                color: var(--m-green);
+
+            }
+        }
+    }
+}
+
+.new-arrivals {
+    padding: 50px;
+
+    h1 {
+        text-align: center;
+        color: var(--m-green);
+        font-size: 5rem;
+        font-weight: 600;
+    }
+}
+
+.category {
+    padding: 10px;
+    color: var(--m-green);
+    font-weight: 600;
+    text-align: center;
+}
