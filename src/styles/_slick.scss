@@ -1,0 +1,24 @@
+.slick-1 {
+
+    .slick-prev,
+    .slick-next {
+        opacity: 0;
+        transition: all 0.3s;
+        width: 35px;
+        height: 35px;
+
+        &::before {
+            opacity: 1;
+            font-size: 35px;
+            color: var(--m-green);
+        }
+    }
+
+    .slick-prev {
+        left: -35px;
+    }
+
+    .slick-next {
+        right: -35px;
+    }
+}
