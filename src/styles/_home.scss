@@ -52,8 +52,10 @@
 
 .category {
     padding: 10px;
-    color: var(--m-green);
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
+    h3{
+        color: var(--m-green);
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-align: center;
+    }
 }
