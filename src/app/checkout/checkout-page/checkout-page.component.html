@@ -1,0 +1,221 @@
+<div class="container-fluid">
+    <div class="row" style="height: 200px; background-color: maroon;">
+        <!-- <div class="caption "> -->
+        <!-- <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="assets/images/home/home1.jpg">
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+            </div> -->
+        <!-- </div> -->
+    </div>
+</div>
+
+<div class="container">
+    <div class="row  justify-content-center mt-5 mb-5 checkout">
+        <div class="col-4 left">
+            <!-- <img src="assets/images/home/home1.jpg" width="100%" height="600px"> -->
+            <div class="container-checkout">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="https://www.w3schools.com/howto/img_5terre_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="https://www.w3schools.com/howto/img_lights_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+                </div>
+
+                <a class="prev" (click)="plusSlides(-1)">
+                    <i class="bi bi-chevron-left"></i>
+                </a>
+                <a class="next" (click)="plusSlides(1)">
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+
+                <!-- <div class="caption-container">
+                    <p id="caption"></p>
+                </div> -->
+
+                <div class="row g-1 mt-3">
+                    <div class="col">
+                        <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods.jpg" style="width:100%"
+                            (click)="currentSlide(1)" alt="The Woods">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="https://www.w3schools.com/howto/img_5terre.jpg" style="width:100%"
+                            (click)="currentSlide(2)" alt="Cinque Terre">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="https://www.w3schools.com/howto/img_mountains.jpg"
+                            style="width:100%" (click)="currentSlide(3)" alt="Mountains and fjords">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="https://www.w3schools.com/howto/img_lights.jpg" style="width:100%"
+                            (click)="currentSlide(4)" alt="Northern Lights">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%"
+                            (click)="currentSlide(5)" alt="Nature and sunrise">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="https://www.w3schools.com/howto/img_snow.jpg" style="width:100%"
+                            (click)="currentSlide(6)" alt="Snowy Mountains">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <p>I'm a product description. I'm a great place to add more details about your product such as sizing,
+                    material, care
+                    instructions and cleaning instructions.</p>
+            </div>
+        </div>
+        <div class="col-4 right">
+            <div class="product-dtl">
+                <h3>I'm a product</h3>
+                <p class="sku">SKU:0020</p>
+                <p class="price">$500</p>
+            </div>
+            <div class="product-size">
+                <p>Size</p>
+                <select class="rounded-0 form-select" aria-label="Default select example">
+                    <option selected>Select</option>
+                    <option value="1">Large</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Small</option>
+                </select>
+                <p class="mt-3">Quantity</p>
+                <input type="number" class="rounded-0 form-control" style="width: 80px;" value="1"
+                    id="exampleFormControlInput1">
+            </div>
+            <div class="d-grid gap-2 mt-4">
+                <button class="btn btn-success rounded-0">Add to Cart</button>
+                <button class="btn btn-dark rounded-0">Buy Now</button>
+            </div>
+            <div class="product-info mt-3">
+                <div class="accordion accordion-flush" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                PRODUCT INFO
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                I'm a product detail. I'm a great place to add more information about your product such
+                                as sizing, material, care and
+                                cleaning instructions. This is also a great space to write what makes this product
+                                special and how your customers can
+                                benefit from this item.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                RETURN & REFUND POLICY
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                I'm a Return and Refund policy. I'm a great place to let your customers know what to do
+                                in case they are dissatisfied
+                                with their purchase. Having a straightforward refund or exchange policy is a great way
+                                to build trust and reassure your
+                                customers that they can buy with confidence.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                SHIPPING INFO
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                I'm a shipping policy. I'm a great place to add more information about your shipping
+                                methods, packaging and cost.
+                                Providing straightforward information about your shipping policy is a great way to build
+                                trust and reassure your
+                                customers that they can buy from you with confidence.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row  mt-5 mb-5">
+        <h3 style="text-align: center;">Related Products</h3>
+    </div>
+    <div class="row justify-content-center mb-5">
+        <div class="col-10 related-products-slick">
+            <div id="slick2" class="slick-2" data-slick='{"slidesToShow": 5, "slidesToScroll": 5}'>
+                <div>
+                    <div class="card " style="margin-left: 15px;margin-right: 15px;">
+                        <img src="assets/images/home/home1.jpg" class="card-img" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="card " style="margin-left: 15px;margin-right: 15px;">
+                        <img src="assets/images/home/home2.jpg" class="card-img" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="card " style="margin-left: 15px;margin-right: 15px;">
+                        <img src="assets/images/home/home3.jpg" class="card-img" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="card " style="margin-left: 15px;margin-right: 15px;">
+                        <img src="assets/images/home/home4.jpg" class="card-img" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="card " style="margin-left: 15px;margin-right: 15px;">
+                        <img src="assets/images/home/home5.jpg" class="card-img" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="card " style="margin-left: 15px;margin-right: 15px;">
+                        <img src="assets/images/home/home6.jpg" class="card-img" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
