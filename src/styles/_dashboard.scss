@@ -1,47 +1,71 @@
-
 .dashboard {
     position: relative;
-    min-height: 75vh !important;
-    .caption{
+    height: 90vh !important;
+
+    .caption {
         color: white;
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        > *{
+        // left: 50%;
+        // transform: translateY(-80%);
+
+        >* {
             text-align: center;
-        } 
+        }
+
+        &:hover .slick-1 {
+
+            .slick-prev,
+            .slick-next {
+                opacity: 1;
+            }
+        }
     }
 }
 
-.career-wallpaper{
-    background-image: url(../assets/images/1.jpg);   
+.home-wallpaper {
+    background-image: url(../assets/images/home/home35.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.main-content{
+.career-wallpaper {
+    background-image: url(../assets/images/1.jpg);
+}
+
+.about-wallpaper {
+    background-image: url(../assets/images/3.jpg);
+}
+
+.main-content {
     padding: 100px 50px;
-    box-shadow:  0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    box-shadow: 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
     border-radius: 6px;
     margin-top: -100px;
-    
+
 }
 
-.top-color{
+.top-color {
     // background-image: linear-gradient(#d2d9de , white 95%);
     // box-shadow: inset 0 0 1px 1px hsla(0,0%,100%,.9),0 20px 27px 0 rgba(0,0,0,.05)!important;
 }
 
 .blur {
     backdrop-filter: saturate(200%) blur(30px);
-    background-color: hsla(0,0%,100%,.8)!important;
+    background-color: hsla(0, 0%, 100%, .8) !important;
 }
 
-.career-opportunity{
-    > *{
+.career-opportunity {
+    >* {
         text-align: center;
     }
 
-    svg{
+    svg {
         color: var(--m-green);
     }
+}
+
+.full-width-row {
+    margin-left: -50px;
+    margin-right: -50px;
 }

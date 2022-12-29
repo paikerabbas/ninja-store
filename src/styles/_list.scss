@@ -1,9 +1,21 @@
-.list-style-1{padding-left: 0;
+.list-style-1 {
+    padding-left: 0;
     list-style: none;
-    li{
-            padding: 10px 20px;
-        &:hover{
+
+    li {
+        padding: 10px 20px;
+
+        &:hover {
             background-color: rgb(11, 132, 65, 0.2);
+        }
+    }
+}
+
+.social-list-1 {
+    .nav-item {
+        .nav-link {
+            padding: 5px;
+            color: white;
         }
     }
 }

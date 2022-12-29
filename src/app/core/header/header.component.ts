@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll() {
-    window.pageYOffset >= 100 ? (this.isScrolled = true) : (this.isScrolled = false);
+    window.scrollY >= 100 ? (this.isScrolled = true) : (this.isScrolled = false);
     this.num = window.pageYOffset;
   }
 
