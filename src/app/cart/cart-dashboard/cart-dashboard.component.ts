@@ -47,38 +47,37 @@ export class CartDashboardComponent implements OnInit {
 	}
 
 	removeItem(item: Item, index: number) {
-		const i = this.selectedItem.findIndex(element => element.id === item.id);
 		let cartItems = document.getElementsByClassName("cart__item") as HTMLCollectionOf<HTMLElement>;
 		let cartRmvBtns = document.getElementsByClassName('cart__action-btn_danger') as HTMLCollectionOf<HTMLElement>;
 		let cartAddBtns = document.getElementsByClassName('cart__action-btn_success') as HTMLCollectionOf<HTMLElement>;
 
-
-		if (i > -1) {
-			this.selectedItem.splice(i, 1);
-			for (let i = 0; i < cartItems.length; i++) {
-				if (i === index) {
-					cartItems[i].className = cartItems[i].className.replace("cart__item-selected", "");
-					cartRmvBtns[i].style.display = 'none';
-					cartAddBtns[i].className = cartAddBtns[i].className.replace("d-none", "");
-					cartAddBtns[i].style.display = 'block';
-
-					//substract amount of removed item from total amount
-					this.totalAmt -= item.price * item.qty;
-				}
-
+		this.selectedItem.splice(this.selectedItem.findIndex(element => element.id === item.id), 1);
+		for (let i = 0; i < cartItems.length; i++) {
+			if (i === index) {
+				cartItems[i].className = cartItems[i].className.replace("cart__item-selected", "");
+				cartRmvBtns[i].style.display = 'none';
+				cartAddBtns[i].className = cartAddBtns[i].className.replace("d-none", "");
+				cartAddBtns[i].style.display = 'block';
+				//substract amount of removed item from total amount
+				this.totalAmt -= item.price * item.qty;
 			}
-		} else {
-			this.selectedItem.push(item);
-			for (let i = 0; i < cartItems.length; i++) {
-				if (i === index) {
-					cartItems[i].className += " cart__item-selected";
-					cartAddBtns[i].style.display = 'none';
-					cartRmvBtns[i].style.display = 'block';
-					//Add the amount of added item into total amount
-					this.totalAmt += item.price * item.qty;
-				}
-			}
+		}
+	}
 
+	addItem(item: Item, index: number) {
+		let cartItems = document.getElementsByClassName("cart__item") as HTMLCollectionOf<HTMLElement>;
+		let cartRmvBtns = document.getElementsByClassName('cart__action-btn_danger') as HTMLCollectionOf<HTMLElement>;
+		let cartAddBtns = document.getElementsByClassName('cart__action-btn_success') as HTMLCollectionOf<HTMLElement>;
+
+		this.selectedItem.push(item);
+		for (let i = 0; i < cartItems.length; i++) {
+			if (i === index) {
+				cartItems[i].className += " cart__item-selected";
+				cartAddBtns[i].style.display = 'none';
+				cartRmvBtns[i].style.display = 'block';
+				//Add the amount of added item into total amount
+				this.totalAmt += item.price * item.qty;
+			}
 		}
 	}
 }
