@@ -15,7 +15,7 @@ export class HomePageComponent implements OnInit {
   }
 
   openCheckoutPage() {
-    this.router.navigateByUrl('/checkout');
+    this.router.navigateByUrl('/product-detail');
   }
 
 }

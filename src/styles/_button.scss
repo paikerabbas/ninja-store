@@ -10,13 +10,26 @@
     user-select: none;
 }
 
-.nicon-round {
+.cart__action-btn {
     border-radius: 50%;
     padding: 4px 8px;
-    color: var(--content-light-variant-4);
+    transition: all 0.2s;
+
+}
+
+.cart__action-btn_success {
+    background-color: var(--m-green);
+    color: white;
 
     &:hover {
-        background-color: var(--content-light-variant-5);
+        background-color: var(--primary-bg);
+    }
+}
+
+.cart__action-btn_danger {
+
+    &:hover {
         color: white;
+        background-color: var(--content-light-variant-5);
     }
 }

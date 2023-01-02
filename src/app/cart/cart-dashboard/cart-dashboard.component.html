@@ -11,8 +11,8 @@
 
     <div class="row mt-5 mb-5 justify-content-center">
         <div class="col-8">
-            <div class="d-flex">
-                <div>
+            <div class="d-flex cart__stepper">
+                <div class="cart__stepper-icon">
                     <i class="bi bi-check2-circle"></i>
                 </div>
                 <div>
@@ -90,28 +90,28 @@
                         <td>{{item.size}}</td>
                         <td>${{item.price}}</td>
                         <td>
-                            <div class="d-flex">
-                                <div>
-                                    <div style="margin: 0; padding: 5px 10px;min-width: 50px;"> {{item.qty}}</div>
-                                </div>
-                                <div>
-                                    <button type="button" class="btn btn-info btn-round btn-rounded-start "
-                                        (click)="decrease(i)">
-                                        <i class="bi bi-dash" style="font-size: 1.5rem;line-height: 0;"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-info btn-round btn-rounded-end"
-                                        (click)="increase(i)">
-                                        <i class="bi bi-plus" style="font-size: 1.5rem;line-height: 0;"></i>
-                                    </button>
-                                </div>
+                            <div class="cart__item-qty">
+                                <button type="button" class="btn  button-1  btn-rounded-start " (click)="decrease(i)">
+                                    <i class="bi bi-dash" style="font-size: 1.5rem;"></i>
+                                </button>
+                                <div>{{item.qty}}</div>
+                                <button type="button" class="btn  button-2  btn-rounded-end" (click)="increase(i)">
+                                    <i class="bi bi-plus" style="font-size: 1.5rem;"></i>
+                                </button>
                             </div>
                         </td>
                         <td>
                             $ {{item.price * item.qty}}
                         </td>
                         <td>
-                            <button type="button" class="nbtn nicon-round i_light" (click)="removeItem(item, i)">
+                            <button type="button" class="nbtn cart__action-btn cart__action-btn_danger"
+                                (click)="removeItem(item, i)" data-bs-toggle="tooltip"
+                                data-bs-title="Remove from cart!">
                                 <i class="bi bi-x-lg"></i>
+                            </button>
+                            <button type="button" class="nbtn cart__action-btn cart__action-btn_success d-none"
+                                (click)="removeItem(item, i)" data-bs-toggle="tooltip" data-bs-title="Add to cart!">
+                                <i class="bi bi-plus-lg"></i>
                             </button>
                         </td>
                     </tr>
@@ -132,7 +132,8 @@
             <div class="cart__footer-total">
                 <strong>Total : ₹ {{totalAmt}}</strong>
             </div>
-            <button class="cart__footer-checkout">Check Out({{selectedItem.length}})</button>
+            <button class="cart__footer-checkout" [disabled]="selectedItem.length === 0">Check
+                Out({{selectedItem.length}})</button>
 
         </div>
     </div>
