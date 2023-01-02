@@ -36,8 +36,8 @@ const routes: Routes = [
 			import('./work-with-us/work-with-us.module').then(m => m.WorkWithUsModule)
 	},
 	{
-		path: 'checkout', loadChildren: () =>
-			import('./checkout/checkout.module').then(m => m.CheckoutModule)
+		path: 'product-detail', loadChildren: () =>
+			import('./product-detail/product-detail.module').then(m => m.ProductDetailModule)
 	},
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },
