@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MainService } from 'src/app/main.service';
 
 @Component({
 	selector: 'app-cart-dashboard',
@@ -10,9 +12,11 @@ export class CartDashboardComponent implements OnInit {
 	selectedItem: Item[] = [];
 	totalAmt = 0
 
-	constructor() { }
+	constructor(private activatedRoute: ActivatedRoute,
+		private mainService: MainService) { }
 
 	ngOnInit(): void {
+
 		this.selectedItem = [...this.allItem];
 		this.totalAmt = this.calculateTotalAmt();
 	}
