@@ -1,21 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MainService } from '../main.service';
+import { Product, ProductInfo } from '../models/product';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+	selector: 'app-home-page',
+	templateUrl: './home-page.component.html',
+	styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  title = "Carousel";
+	title = "Carousel";
 
-  constructor(private router: Router) { }
+	latestWomenWear: ProductInfo[] = [];
 
-  ngOnInit(): void {
-  }
+	constructor(private router: Router,
+		private mainService: MainService) { }
 
-  openCheckoutPage() {
-    this.router.navigateByUrl('/product-detail');
-  }
+
+	ngOnInit(): void {
+		this.mainService.getLatestProductInfo().subscribe(
+			data => {
+				this.latestWomenWear = data;
+			}
+		);
+	}
+	viewProduct(productInfo: ProductInfo) {
+
+		this.router.navigate(['/select-product', productInfo.sku]);
+
+
+	}
 
 }

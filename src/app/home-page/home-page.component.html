@@ -61,66 +61,24 @@
 		<h3>Women's Wear</h3>
 	</div>
 	<div class="row g-5">
-		<div class="col">
-			<div class="product-card" [routerLink]="['/product-detail']">
+		<div class="col" *ngFor="let product of latestWomenWear">
+			<div class="product-card" (click)="viewProduct(product)">
+				<!-- <div class="product-card" target="_blank" [routerLink]="['/select-product/', product.sku]"> -->
+
 				<div class="img-container">
-					<img src="assets/images/home/home1.jpg">
+					<img src="{{product.imgUrl}}">
 					<div class="overlay">
 						<p>Quick View</p>
 					</div>
 				</div>
 				<div class="product">
-					<p class="name">I'm a product</p>
-					<p class="price">$500.00</p>
+					<p class="name">{{product.name}}</p>
+					<p class="price">₹{{product.price}}</p>
 				</div>
 
 			</div>
 		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home2.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>$500.00</p>
-				</div>
 
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home6.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>$500.00</p>
-				</div>
-
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home4.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>$500.00</p>
-				</div>
-
-			</div>
-		</div>
 	</div>
 
 </div>
@@ -133,7 +91,7 @@
 
 		<div class="col">
 			<div class="product-card">
-				<div class="img-container" (click)="openCheckoutPage()">
+				<div class="img-container">
 					<img src="assets/images/home/home1.jpg">
 					<div class="overlay">
 						<p>Quick View</p>
@@ -141,7 +99,7 @@
 				</div>
 				<div class="product">
 					<p class="name">I'm a product</p>
-					<p class="price">$500.00</p>
+					<p class="price">₹500.00</p>
 				</div>
 
 			</div>
@@ -156,7 +114,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -171,7 +129,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -186,7 +144,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -211,7 +169,7 @@
 				</div>
 				<div class="product">
 					<p class="name">I'm a product</p>
-					<p class="price">$500.00</p>
+					<p class="price">₹500.00</p>
 				</div>
 
 			</div>
@@ -226,7 +184,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -241,7 +199,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -256,7 +214,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -281,7 +239,7 @@
 				</div>
 				<div class="product">
 					<p class="name">I'm a product</p>
-					<p class="price">$500.00</p>
+					<p class="price">₹500.00</p>
 				</div>
 
 			</div>
@@ -296,7 +254,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -311,7 +269,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -326,7 +284,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -351,7 +309,7 @@
 				</div>
 				<div class="product">
 					<p class="name">I'm a product</p>
-					<p class="price">$500.00</p>
+					<p class="price">₹500.00</p>
 				</div>
 
 			</div>
@@ -366,7 +324,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -381,7 +339,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -396,7 +354,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -421,7 +379,7 @@
 				</div>
 				<div class="product">
 					<p class="name">I'm a product</p>
-					<p class="price">$500.00</p>
+					<p class="price">₹500.00</p>
 				</div>
 
 			</div>
@@ -436,7 +394,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -451,7 +409,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
@@ -466,7 +424,7 @@
 				</div>
 				<div>
 					<p>I'm a product</p>
-					<p>$500.00</p>
+					<p>₹500.00</p>
 				</div>
 
 			</div>
