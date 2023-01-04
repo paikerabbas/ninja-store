@@ -35,6 +35,14 @@ const routes: Routes = [
 		path: 'work-with-us', loadChildren: () =>
 			import('./work-with-us/work-with-us.module').then(m => m.WorkWithUsModule)
 	},
+	{
+		path: 'select-product/:sku', loadChildren: () =>
+			import('./select-product/select-product.module').then(m => m.SelectProductModule)
+	},
+	{
+		path: 'product-detail', loadChildren: () =>
+			import('./product-detail/product-detail.module').then(m => m.ProductDetailModule)
+	},
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },
 ];

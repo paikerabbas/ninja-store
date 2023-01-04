@@ -14,31 +14,13 @@
 			</svg>
 		</a>
 
-		<form class="d-none d-sm-flex  d-lg-none header-search-form" role="search">
-			<div class="input-group ">
-				<input type="text" class="form-control" placeholder="Search for products, brands and more"
-					aria-label="Recipient's username" aria-describedby="basic-addon2">
-				<span class="input-group-text" id="basic-addon2">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-						class="bi bi-search" viewBox="0 0 16 16">
-						<path
-							d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-					</svg>
-				</span>
-			</div>
-		</form>
 		<!-- Search and list icon  -->
 		<div class="d-flex  justify-content-end  ">
 			<!-- Search icon visible on xs devices  -->
-			<button class="navbar-toggler d-flex d-sm-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
+			<button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
 				data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
-					viewBox="0 0 16 16">
-					<path
-						d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-				</svg>
+				<i class="bi bi-search"></i>
 			</button>
-
 			<!-- List icon visible on lt-lg devices  -->
 			<button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
 				data-bs-target="#ninjaSidebar" aria-controls="ninjaSidebar">
@@ -64,21 +46,11 @@
 			<div class="offcanvas-body p-4 pt-0 p-lg-0 ">
 				<!-- Sidebar menu visible on gt-md devices -->
 				<ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-none d-lg-flex">
-					<li>
-						<form class="" style="width: 400px;" role="search">
-							<div class="input-group ">
-								<input type="text" class="form-control"
-									placeholder="Search for products, brands and more" aria-label="Recipient's username"
-									aria-describedby="basic-addon2">
-								<span class="input-group-text" id="basic-addon2">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-										class="bi bi-search" viewBox="0 0 16 16">
-										<path
-											d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-									</svg>
-								</span>
-							</div>
-						</form>
+					<li style="width: 30px;">
+						<button class="navbar-toggler d-flex order-3 p-2" type="button" data-bs-toggle="offcanvas"
+							data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+							<i class="bi bi-search"></i>
+						</button>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -110,7 +82,7 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
 							aria-expanded="false">
-							Hello, SignIn
+							Hello, Sign In
 						</a>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="#">New customer? Sign Up</a></li>
@@ -191,7 +163,7 @@
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
 									data-bs-target="#flush-collapseTwo" aria-expanded="false"
 									aria-controls="flush-collapseTwo">
-									Hello, SignIn
+									Hello, Sign In
 								</button>
 							</h2>
 							<div id="flush-collapseTwo" class="accordion-collapse collapse"
@@ -266,18 +238,27 @@
 		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 	</div>
 	<div class="offcanvas-body ">
-		<form class="" style="width: 100%;">
-			<div class="input-group ">
-				<input type="text" class="form-control" placeholder="Search for products, brands and more"
-					aria-label="Recipient's username" aria-describedby="basic-addon2">
-				<span class="input-group-text" id="basic-addon2">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-						class="bi bi-search" viewBox="0 0 16 16">
-						<path
-							d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-					</svg>
-				</span>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+
+					<form class="" style="width: 100%;">
+						<div class="input-group ">
+							<!-- Navbar menu visible on lt-lg devices -->
+							<input type="text" class="d-flex d-lg-none form-control "
+								placeholder="Search for products, brands and more" aria-label="Recipient's username"
+								aria-describedby="basic-addon2">
+							<!-- Navbar menu visible on gt-md devices -->
+							<input type="text" class="d-none d-lg-flex form-control form-control-lg"
+								placeholder="Search for products, brands and more" aria-label="Recipient's username"
+								aria-describedby="basic-addon2">
+							<span class="input-group-text" id="basic-addon2">
+								<i class="bi bi-search"></i>
+							</span>
+						</div>
+					</form>
+				</div>
 			</div>
-		</form>
+		</div>
 	</div>
 </div>
