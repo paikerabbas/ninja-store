@@ -1,17 +1,40 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { of } from 'rxjs';
-import { Product, ProductInfo } from './models/product';
+import { CartProduct, Product, ProductInfo } from './models/product';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class MainService {
 
+	productSkusSubject$ = new BehaviorSubject<string>('');
+	public productSkusState = this.productSkusSubject$.asObservable();
+
 	LATEST_PRODUCT_INFO = 'ninja/latest/womenwear';
 
-	constructor(private httpClient: HttpClient) { }
+	constructor(private httpClient: HttpClient) {
+		let skusString = localStorage.getItem('skus');
+		if (skusString) {
+			this.productSkusSubject$.next(skusString);
+		}
+	}
+
+	setProductSkuToLocalStorage(sku: string) {
+		let skusString = localStorage.getItem('skus');
+		if (skusString) {
+			let skus = skusString.split(',');
+			skus.push(sku);
+			localStorage.setItem('skus', skus.toString());
+		} else {
+			localStorage.setItem('skus', sku);
+		}
+		skusString = localStorage.getItem('skus');
+		if (skusString) {
+			this.productSkusSubject$.next(skusString)
+		}
+	}
 
 	getLatestProductInfo(): Observable<ProductInfo[]> {
 		// return this.httpClient.get(this.LATEST_PRODUCT);
@@ -33,15 +56,21 @@ export class MainService {
 
 	getProductBySku(sku: string): Observable<Product> {
 		let allWear: Product[] = [...this.womenWear, ...this.menWear];
+		let cartProduct = allWear.filter(item => item.sku === sku)[0];
 
-		return of(allWear.filter(item => item.sku === sku)[0]);
+		return of(cartProduct);
 	}
+
+	cartProductList: CartProduct[] = [];
+
 
 	womenWear: Product[] = [
 		{
 			id: 1001,
 			sku: 'WSKU1533',
 			name: 'Barbie Kurti',
+			size: ['M'],
+			available: 14,
 			price: 300,
 			imgUrls: [
 				'assets/images/product/img_5terre.jpg',
@@ -60,6 +89,8 @@ export class MainService {
 			id: 1002,
 			sku: 'WSKU1644',
 			name: 'Banarsi Sari',
+			size: ['XXL'],
+			available: 11,
 			price: 800,
 			imgUrls: [
 				'assets/images/product/img_5terre.jpg',
@@ -78,6 +109,8 @@ export class MainService {
 			id: 1003,
 			sku: 'WSKU1755',
 			name: 'Plazzo',
+			size: ['S'],
+			available: 9,
 			price: 900,
 			imgUrls: [
 				'assets/images/product/img_5terre.jpg',
@@ -96,6 +129,8 @@ export class MainService {
 			id: 1004,
 			sku: 'WSKU1866',
 			name: 'Jeans',
+			size: ['XL'],
+			available: 7,
 			price: 1200,
 			imgUrls: [
 				'assets/images/product/img_5terre.jpg',
@@ -117,6 +152,8 @@ export class MainService {
 			id: 1011,
 			sku: 'WSKU3562',
 			name: 'Pajama',
+			size: ['L'],
+			available: 22,
 			price: 800,
 			imgUrls: [
 				'assets/images/product/img_5terre.jpg',
@@ -135,6 +172,8 @@ export class MainService {
 			id: 1022,
 			sku: 'WSKU8365',
 			name: 'Formal Suit',
+			size: ['XL'],
+			available: 3,
 			price: 1200,
 			imgUrls: [
 				'assets/images/product/img_5terre.jpg',
@@ -153,6 +192,8 @@ export class MainService {
 			id: 1033,
 			sku: 'WSKU9754',
 			name: 'T-Shirt',
+			size: ['M'],
+			available: 16,
 			price: 700,
 			imgUrls: [
 				'assets/images/product/img_5terre.jpg',
@@ -171,6 +212,8 @@ export class MainService {
 			id: 1034,
 			sku: 'WSKU10348',
 			name: 'Sherwani',
+			size: ['L'],
+			available: 5,
 			price: 12000,
 			imgUrls: [
 				'assets/images/product/img_5terre.jpg',

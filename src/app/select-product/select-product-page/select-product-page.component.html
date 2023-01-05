@@ -98,17 +98,34 @@
                 <p class="sku">SKU:{{product.sku}}</p>
                 <p class="price">₹{{product.price}}</p>
             </div>
-            <div class="product-size">
-                <p>Size</p>
-                <select class="rounded-0 form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Large</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Small</option>
-                </select>
-                <p class="mt-3">Quantity</p>
-                <input type="number" class="rounded-0 form-control" style="width: 80px;" value="1"
-                    id="exampleFormControlInput1">
+            <!-- <div class="select__product-color">
+                <p>COLORS</p>
+                <div class="d-flex ">
+                    <div class="select__product-color-div">
+                        <span class="select__product-red-color"></span>
+                    </div>
+                    <div class="select__product-color-div">
+                        <span class="select__product-green-color"></span>
+                    </div>
+                    <div class="select__product-color-div">
+                        <span class="select__product-blue-color"></span>
+                    </div>
+                    <div class="select__product-color-div">
+                        <span class="select__product-fuchsia-color"></span>
+                    </div>
+                </div>
+            </div> -->
+            <div class="select__product-size">
+                <p>SIZES</p>
+                <div class="d-flex ">
+                    <div class="select__product-size-div" (click)="selectProductSize('XS', 0)"> XS </div>
+                    <div class="select__product-size-div" (click)="selectProductSize('S', 1)"> S </div>
+                    <div class="select__product-size-div" (click)="selectProductSize('M', 2)"> M </div>
+                    <div class="select__product-size-div" (click)="selectProductSize('L', 3)"> L </div>
+                    <div class="select__product-size-div" (click)="selectProductSize('XL', 4)"> XL </div>
+                    <div class="select__product-size-div" (click)="selectProductSize('XXL', 5)"> XXL </div>
+                </div>
+
             </div>
             <div class="d-grid gap-2 mt-4">
                 <button class="btn btn-success rounded-0" (click)="openCart()">Buy Now</button>
