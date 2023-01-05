@@ -1,25 +1,37 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MainService } from 'src/app/main.service';
+import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+	selector: 'app-header',
+	templateUrl: './header.component.html',
+	styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 
-  isScrolled = false;
-  num = 0;
-  constructor() { }
+	@Input() isScrolled = false;
+	// num = 0;
+	productSkuList: string[] = [];
+	subscription = new Subscription();
 
-  ngOnInit(): void {
-  }
+	constructor(private mainService: MainService) { }
 
+	ngOnInit(): void {
+		this.getCartList();
+	}
 
+	getCartList() {
+		const skuSub = this.mainService.productSkusState.subscribe(
+			data => {
+				if (data && (data !== '')) {
+					this.productSkuList = data.split(',');
+				}
+			}
+		);
+		this.subscription.add(skuSub);
+	}
 
-  @HostListener('window:scroll', [])
-  onScroll() {
-    window.scrollY >= 100 ? (this.isScrolled = true) : (this.isScrolled = false);
-    this.num = window.pageYOffset;
-  }
-
+	ngOnDestroy() {
+		this.subscription.unsubscribe()
+	}
 }
