@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { MainService } from 'src/app/main.service';
-import { Product, ProductInfo } from 'src/app/models/product';
+import { CartProduct, Product, ProductInfo } from 'src/app/models/product';
 declare var $: any;
 
 @Component({
@@ -13,6 +13,7 @@ export class SelectProductPageComponent implements OnInit {
 
 	slideIndex = 1;
 	product!: Product;
+	cartProduct!: CartProduct;
 	sku: string | null = '';
 	private sub: any;
 
@@ -25,33 +26,40 @@ export class SelectProductPageComponent implements OnInit {
 		this.sub = this.activatedRoute.parent?.paramMap.subscribe(params => {
 			this.sku = params.get('sku');
 		});
-		this.getProductById();
+		this.getProductBySku();
 		this.showSlides(this.slideIndex);
 
 		$('#slick2').slick({});
 	}
 
-	getProductById() {
+	getProductBySku() {
 
 		if (this.sku && this.sku !== '') {
 			this.mainService.getProductBySku(this.sku).subscribe(
 				data => {
 					this.product = data;
+					this.cartProduct = { id: data.id, sku: data.sku, name: data.name, size: "", qty: 1, price: data.price, imgUrl: data.imgUrls[0] };
 				}
 			);
 		}
 	}
 
 	openCart() {
-		let skusString = localStorage.getItem('skus');
-		if (skusString) {
-			let skus = skusString.split(',');
-			skus.push(this.product.sku);
-			localStorage.setItem('skus', skus.toString());
-		} else {
-			localStorage.setItem('skus', this.product.sku);
-		}
+		this.mainService.setProductSkuToLocalStorage(this.product.sku);
+		this.mainService.cartProductList.push(this.cartProduct);
 		this.router.navigate(['/cart']);
+	}
+
+	selectProductSize(size: string, index: number) {
+		let sizes = document.getElementsByClassName("select__product-size-div") as HTMLCollectionOf<HTMLElement>;
+		for (let i = 0; i < sizes.length; i++) {
+			if (i === index) {
+				sizes[i].className += " selected";
+			} else {
+				sizes[i].className = sizes[i].className.replace("selected", "");
+			}
+		}
+		this.cartProduct.size = size;
 	}
 
 	plusSlides(n: number) {
