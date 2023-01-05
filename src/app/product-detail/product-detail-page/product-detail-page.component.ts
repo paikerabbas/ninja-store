@@ -1,65 +1,65 @@
 import {
-  Component,
-  OnInit
+	Component,
+	OnInit
 }
 
-from '@angular/core';
+	from '@angular/core';
 declare var $: any;
 
-@Component( {
-    selector: 'app-product-detail-page',
-    templateUrl: './product-detail-page.component.html',
-    styleUrls: ['./product-detail-page.component.scss']
-  }
+@Component({
+	selector: 'app-product-detail-page',
+	templateUrl: './product-detail-page.component.html',
+	styleUrls: ['./product-detail-page.component.scss']
+}
 
 ) export class ProductDetailPageComponent implements OnInit {
-  slideIndex=1;
+	slideIndex = 1;
 
-  constructor() {}
+	constructor() { }
 
-  ngOnInit(): void {
-    this.showSlides(this.slideIndex);
+	ngOnInit(): void {
+		this.showSlides(this.slideIndex);
 
-    $('#slick2').slick( {}
+		$('#slick2').slick({}
 
-    );
-  }
+		);
+	}
 
-  plusSlides(n: number) {
-    this.showSlides(this.slideIndex +=n);
-  }
+	plusSlides(n: number) {
+		this.showSlides(this.slideIndex += n);
+	}
 
-  currentSlide(n: number) {
-    this.showSlides(this.slideIndex=n);
-  }
+	currentSlide(n: number) {
+		this.showSlides(this.slideIndex = n);
+	}
 
-  showSlides(n: number) {
-    let i;
-    let slides=document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
-    let dots=document.getElementsByClassName("demo") as HTMLCollectionOf<HTMLElement>;
+	showSlides(n: number) {
+		let i;
+		let slides = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
+		let dots = document.getElementsByClassName("demo") as HTMLCollectionOf<HTMLElement>;
 
-    // let captionText = document.getElementById("caption") as HTMLElement;
-    if (n > slides.length) {
-      this.slideIndex=1
-    }
+		// let captionText = document.getElementById("caption") as HTMLElement;
+		if (n > slides.length) {
+			this.slideIndex = 1
+		}
 
-    if (n < 1) {
-      this.slideIndex=slides.length
-    }
+		if (n < 1) {
+			this.slideIndex = slides.length
+		}
 
-    for (i=0; i < slides.length; i++) {
-      slides[i].style.display="none";
-    }
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
 
-    for (i=0; i < dots.length; i++) {
-      dots[i].className=dots[i].className.replace(" active", "");
-    }
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
 
-    slides[this.slideIndex - 1].style.display="block";
-    dots[this.slideIndex - 1].className+=" active";
-    // if (captionText) {
-    //   captionText.innerHTML = dots[this.slideIndex - 1].getAttribute('alt')!;
-    // }
-  }
+		slides[this.slideIndex - 1].style.display = "block";
+		dots[this.slideIndex - 1].className += " active";
+		// if (captionText) {
+		//   captionText.innerHTML = dots[this.slideIndex - 1].getAttribute('alt')!;
+		// }
+	}
 
 }
