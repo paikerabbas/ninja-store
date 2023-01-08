@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CustomerCareComponent } from './core/customer-care/customer-care.component';
-import { LoginPageComponent } from './core/login-page/login-page.component';
 import { NotificationComponent } from './core/notification/notification.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
+import { SigninPageComponent } from './core/signin-page/signin-page.component';
+import { SignupPageComponent } from './core/signup-page/signup-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
 	{ path: 'home', component: HomePageComponent },
 	{ path: 'notification', component: NotificationComponent },
 	{ path: 'customer-care', component: CustomerCareComponent },
+	{ path: 'signin', component: SigninPageComponent },
+	{ path: 'signup', component: SignupPageComponent },
 	{
 		path: 'cart', loadChildren: () =>
 			import('./cart/cart.module').then(m => m.CartModule)
