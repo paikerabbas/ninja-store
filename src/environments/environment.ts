@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  environmentName: 'DEV',
+  apiUrl: 'http://localhost:8080',
+  urlPrefix: '/api',
+  carouselImg1: 'http://localhost:8080/image/magazine/122',
+  carouselImg2: 'http://localhost:8080/image/magazine/123',
+  carouselImg3: 'http://localhost:8080/image/magazine/124',
+  carouselImg4: 'http://localhost:8080/image/magazine/125',
 };
 
 /*
