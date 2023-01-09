@@ -24,14 +24,22 @@ export class SignupPageComponent implements OnInit {
 
 
 	signupForm = this.fb.group({
-		firstname: [''],
+		firstname: ['', [Validators.required]],
 		middlename: [''],
-		lastname: [''],
+		lastname: ['', [Validators.required]],
 		email: [''],
 		mobile: [''],
 		country: [''],
 		password: [''],
 	});
+
+	get firstname() {
+		return this.signupForm.get('firstname');
+	}
+	get lastname() {
+		return this.signupForm.get('lastname');
+	}
+
 
 
 }
