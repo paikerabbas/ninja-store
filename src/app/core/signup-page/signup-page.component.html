@@ -7,13 +7,23 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title text-center text-green mb-3">Sign Up</h5>
+                                <span>Valid: {{signupForm.valid}}</span><br>
+                                <span>Invalid :
+                                    {{signupForm.invalid}}</span><br>
+                                <span>dirty : {{signupForm.dirty}}</span><br>
+                                <span>Touchec: {{signupForm.touched}}</span>
                                 <form [formGroup]="signupForm" (ngSubmit)="onSignupFormSubmit()">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="inputGroup-sizing-default">
-                                            <i class="bi bi-person"></i>
+                                            <i class="bi bi-person"></i><span style="color: red;">*</span>
                                         </span>
                                         <input type="text" class="form-control" placeholder="First name"
                                             formControlName="firstname">
+
+                                    </div>
+                                    <div class="" style="color: red;"
+                                        *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)">
+                                        First name is mandatory.
                                     </div>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="inputGroup-sizing-default">
@@ -24,10 +34,14 @@
                                     </div>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="inputGroup-sizing-default">
-                                            <i class="bi bi-person"></i>
+                                            <i class="bi bi-person"></i><span style="color: red;">*</span>
                                         </span>
                                         <input type="text" class="form-control" placeholder="Last name"
                                             formControlName="lastname">
+                                    </div>
+                                    <div class="" style="color: red;"
+                                        *ngIf="lastname?.invalid && (lastname?.dirty || lastname?.touched)">
+                                        Last name is mandatory.
                                     </div>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="inputGroup-sizing-default">
@@ -64,8 +78,11 @@
                                         </label>
                                     </div>
                                     <div class="mb-3">
-                                        <button type="submit" class="ninja__button-rounded"> GET STARTED </button>
+                                        <button type="submit" class="ninja__button-rounded"
+                                            [disabled]="signupForm.invalid"> GET
+                                            STARTED </button>
                                     </div>
+
                                 </form>
                             </div>
                         </div>
