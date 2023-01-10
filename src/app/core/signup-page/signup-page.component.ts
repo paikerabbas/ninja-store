@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/auth.service';
 import { MainService } from 'src/app/main.service';
 import { User } from 'src/app/models/user';
 
@@ -13,7 +14,7 @@ export class SignupPageComponent implements OnInit {
 
 
 	constructor(private fb: FormBuilder,
-		private mainService: MainService) {
+		private authService: AuthService) {
 	}
 
 	ngOnInit(): void {
@@ -25,9 +26,9 @@ export class SignupPageComponent implements OnInit {
 		if (this.signupForm.invalid) {
 			return;
 		}
-		let user: User = this.signupForm.value as User;
-		console.log(user)
-		this.mainService.registerUser(user).subscribe(
+		// let user: User = this.signupForm.value as User;
+		console.log(this.signupForm.value)
+		this.authService.registerUser(this.signupForm.value).subscribe(
 			data => {
 				alert(JSON.stringify(data));
 			}
@@ -36,13 +37,13 @@ export class SignupPageComponent implements OnInit {
 
 
 	signupForm = this.fb.group({
-		firstname: ['', [Validators.required]],
-		middlename: [''],
-		lastname: ['', [Validators.required]],
-		email: [''],
-		mobile: [''],
-		country: [''],
-		password: [''],
+		firstname: ['Amar', [Validators.required]],
+		middlename: ['Mehdi'],
+		lastname: ['Husain', [Validators.required]],
+		email: ['amar@gmail.com'],
+		mobile: ['879934'],
+		country: ['India'],
+		password: ['sjskgj'],
 	});
 
 	get firstname() {

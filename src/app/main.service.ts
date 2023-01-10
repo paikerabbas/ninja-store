@@ -25,10 +25,7 @@ export class MainService {
 		}
 	}
 
-	registerUser(user: User): Observable<any> {
-		const url = this.urlPrefix + "/user/registerUser";
-		return this.httpClient.post<any>(url, user);
-	}
+
 
 	setProductSkuToLocalStorage(sku: string) {
 		let skusString = localStorage.getItem('skus');
