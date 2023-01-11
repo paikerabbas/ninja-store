@@ -23,7 +23,9 @@ h5 {
     }
 }
 
-
+.row-box{
+    padding: 25px 15px;
+}
 
 
 .table>tbody>tr>td,
@@ -74,3 +76,20 @@ h5 {
 .text-green {
     color: var(--m-green);
 }
+
+
+// // -------------SMALL DEVICES ---------
+// @media(min-width: 576px) {}
+
+// // -------------Medium DEVICES ---------
+// @media(min-width: 768px) {}
+
+
+// // -------------LARGE DEVICES ---------
+// @media(min-width: 992px) {}
+
+// // -------------EXTRA LARGE DEVICES ---------
+// @media(min-width: 1200px) {}
+
+// // -------------EXTRA EXTRA LARGE DEVICES ---------
+// @media(min-width: 1400px) {}

@@ -12,19 +12,25 @@
                                     {{signupForm.invalid}}</span><br>
                                 <span>dirty : {{signupForm.dirty}}</span><br>
                                 <span>Touchec: {{signupForm.touched}}</span>
-                                <form [formGroup]="signupForm" (ngSubmit)="onSignupFormSubmit()">
+                                <form [formGroup]="signupForm" (ngSubmit)="onSignupFormSubmit()" novalidate>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="inputGroup-sizing-default">
-                                            <i class="bi bi-person"></i><span style="color: red;">*</span>
+                                            <i class="bi bi-person"></i><span class="required-asterisk">*</span>
                                         </span>
                                         <input type="text" class="form-control" placeholder="First name"
                                             formControlName="firstname">
+                                        <div class="error-message">
+                                            <div *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)">
+                                                <span *ngIf="firstname?.errors?.['required']">
+                                                    First name is mandatory.
+                                                </span>
+                                                <span *ngIf="firstname?.errors?.['minlength']">
+                                                    First name should be min 3 character.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                    </div>
-                                    <div class="" style="color: red;"
-                                        *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)">
-                                        First name is mandatory.
-                                    </div>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="inputGroup-sizing-default">
                                             <i class="bi bi-person"></i>
@@ -34,7 +40,7 @@
                                     </div>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="inputGroup-sizing-default">
-                                            <i class="bi bi-person"></i><span style="color: red;">*</span>
+                                            <i class="bi bi-person"></i><span class="required-asterisk">*</span>
                                         </span>
                                         <input type="text" class="form-control" placeholder="Last name"
                                             formControlName="lastname">
