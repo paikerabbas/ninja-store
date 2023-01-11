@@ -105,3 +105,28 @@
     margin-left: -50px;
     margin-right: -50px;
 }
+
+
+
+// -------------SMALL DEVICES ---------
+@media(min-width: 576px) {}
+
+// -------------Medium DEVICES ---------
+@media(min-width: 768px) {}
+
+
+// -------------LARGE DEVICES ---------
+@media(min-width: 992px) {}
+
+// -------------EXTRA LARGE DEVICES ---------
+@media(min-width: 1200px) {}
+
+// -------------EXTRA EXTRA LARGE DEVICES ---------
+@media(min-width: 1400px) {}
+
+// xs < 576px
+// sm >= 576px
+// md ≥ 768px
+// lg ≥ 992px
+// xl ≥ 1200px
+// xxl ≥ 1400px

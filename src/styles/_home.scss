@@ -1,5 +1,4 @@
 .discount {
-    padding: 50px;
     background-color: var(--m-green);
 
     h1,
@@ -7,15 +6,22 @@
     .discount-btn {
         text-align: center;
         color: white;
+           
+    }
+
+    p{
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 2.4rem;
         font-weight: 600;
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
         font-weight: 600;
     }
 
@@ -24,11 +30,12 @@
             border: 2px solid white;
             background: var(--m-green);
             color: white;
-            padding: 8px 40px;
-            font-size: 16px;
+            padding: 8px 5px;
+            font-size: 12px;
             font-weight: 600;
-            margin: 0 30px;
+            margin: 0 5px 10px;
             transition: all 0.3s;
+            width: 95px;
 
             &:hover {
                 background: white;
@@ -59,3 +66,41 @@
         text-align: center;
     }
 }
+
+
+// -------------SMALL DEVICES ---------
+@media(min-width: 576px) {
+    .discount {
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            max-width: 400px;
+            font-size: 1.2rem;
+        }
+
+        .discount-btn {
+            button {
+               
+                padding: 8px 10px;
+                font-size: 16px;
+                margin: 0 15px;
+                width: 125px;
+            }
+        }
+    }
+}
+
+// -------------Medium DEVICES ---------
+@media(min-width: 768px) {}
+
+
+// -------------LARGE DEVICES ---------
+@media(min-width: 992px) {}
+
+// -------------EXTRA LARGE DEVICES ---------
+@media(min-width: 1200px) {}
+
+// -------------EXTRA EXTRA LARGE DEVICES ---------
+@media(min-width: 1400px) {}
