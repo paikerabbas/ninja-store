@@ -5,6 +5,7 @@ import { NotificationComponent } from './core/notification/notification.componen
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { SigninPageComponent } from './core/signin-page/signin-page.component';
 import { SignupPageComponent } from './core/signup-page/signup-page.component';
+import { SignupPage2Component } from './core/signup-page2/signup-page2.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [

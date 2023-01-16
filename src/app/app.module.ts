@@ -13,6 +13,7 @@ import { NotificationComponent } from './core/notification/notification.componen
 import { HeaderComponent } from './core/header/header.component';
 import { SigninPageComponent } from './core/signin-page/signin-page.component';
 import { SignupPageComponent } from './core/signup-page/signup-page.component';
+import { SignupPage2Component } from './core/signup-page2/signup-page2.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SignupPageComponent } from './core/signup-page/signup-page.component';
     NotificationComponent,
     SigninPageComponent,
     SignupPageComponent,
+    SignupPage2Component,
   ],
   imports: [
     BrowserModule,

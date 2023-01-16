@@ -13,7 +13,7 @@ export class AuthService {
 	constructor(private httpClient: HttpClient) { }
 
 	registerUser(signUpFormData: any): Observable<any> {
-		const url = this.urlPrefix + "/registerUser";
+		const url = this.urlPrefix + "/user/register";
 		return this.httpClient.post<any>(url, signUpFormData);
 	}
 }
