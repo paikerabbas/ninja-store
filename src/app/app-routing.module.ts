@@ -1,20 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CustomerCareComponent } from './core/customer-care/customer-care.component';
-import { LoginPageComponent } from './core/login-page/login-page.component';
 import { NotificationComponent } from './core/notification/notification.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
+import { SigninPageComponent } from './core/signin-page/signin-page.component';
+import { SignupPageComponent } from './core/signup-page/signup-page.component';
+import { SignupPage2Component } from './core/signup-page2/signup-page2.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
 	{ path: 'home', component: HomePageComponent },
 	{ path: 'notification', component: NotificationComponent },
 	{ path: 'customer-care', component: CustomerCareComponent },
+	{ path: 'signin', component: SigninPageComponent },
+	{ path: 'signup', component: SignupPageComponent },
 	{
 		path: 'cart', loadChildren: () =>
 			import('./cart/cart.module').then(m => m.CartModule)
 	},
-
 	{
 		path: 'new-arival', loadChildren: () =>
 			import('./new-arival/new-arival.module').then(m => m.NewArivalModule)
@@ -42,6 +45,10 @@ const routes: Routes = [
 	{
 		path: 'product-detail', loadChildren: () =>
 			import('./product-detail/product-detail.module').then(m => m.ProductDetailModule)
+	},
+	{
+		path: 'men-wear', loadChildren: () =>
+			import('./men-wear/men-wear.module').then(m => m.MenWearModule)
 	},
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },

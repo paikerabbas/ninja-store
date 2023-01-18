@@ -23,13 +23,8 @@ h5 {
     }
 }
 
-.cart-button {
-    background-color: var(--m-green);
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    display: inline-block;
-    padding: 10px 20px !important;
+.row-box{
+    padding: 25px 15px;
 }
 
 
@@ -77,3 +72,24 @@ h5 {
 .bg-gradient-dark {
     background-image: linear-gradient(195deg, #42424a, #191919);
 }
+
+.text-green {
+    color: var(--m-green);
+}
+
+
+// // -------------SMALL DEVICES ---------
+// @media(min-width: 576px) {}
+
+// // -------------Medium DEVICES ---------
+// @media(min-width: 768px) {}
+
+
+// // -------------LARGE DEVICES ---------
+// @media(min-width: 992px) {}
+
+// // -------------EXTRA LARGE DEVICES ---------
+// @media(min-width: 1200px) {}
+
+// // -------------EXTRA EXTRA LARGE DEVICES ---------
+// @media(min-width: 1400px) {}

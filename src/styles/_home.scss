@@ -1,34 +1,41 @@
-.discount {
-    padding: 50px;
+.home__discount {
     background-color: var(--m-green);
 
     h1,
     p,
-    .discount-btn {
+    .home__discount-btn {
         text-align: center;
         color: white;
+           
+    }
+
+    p{
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 2.4rem;
         font-weight: 600;
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
         font-weight: 600;
     }
 
-    .discount-btn {
+    .home__discount-btn {
         button {
             border: 2px solid white;
             background: var(--m-green);
             color: white;
-            padding: 8px 40px;
-            font-size: 16px;
+            padding: 8px 5px;
+            font-size: 12px;
             font-weight: 600;
-            margin: 0 30px;
+            margin: 0 5px 10px;
             transition: all 0.3s;
+            width: 95px;
 
             &:hover {
                 background: white;
@@ -39,14 +46,14 @@
     }
 }
 
-.new-arrivals {
-    padding: 50px;
+.home__new-arrivals {
 
     h1 {
         text-align: center;
         color: var(--m-green);
-        font-size: 5rem;
-        font-weight: 600;
+        font-size: 2.5rem;
+        font-weight: 700;
+        padding: 20px 0;
     }
 }
 
@@ -59,3 +66,48 @@
         text-align: center;
     }
 }
+
+
+// -------------SMALL DEVICES ---------
+@media(min-width: 576px) {
+    .home__discount {
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            max-width: 400px;
+            font-size: 1.2rem;
+        }
+
+        .home__discount-btn {
+            button {
+               
+                padding: 8px 10px;
+                font-size: 16px;
+                margin: 0 15px;
+                width: 125px;
+            }
+        }
+    }
+
+    .home__new-arrivals {
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+}
+
+// -------------Medium DEVICES ---------
+@media(min-width: 768px) {}
+
+
+// -------------LARGE DEVICES ---------
+@media(min-width: 992px) {}
+
+// -------------EXTRA LARGE DEVICES ---------
+@media(min-width: 1200px) {}
+
+// -------------EXTRA EXTRA LARGE DEVICES ---------
+@media(min-width: 1400px) {}

@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<div class="row dashboard home-wallpaper">
-		<div class="caption ">
+		<div class="caption d-none d-xl-block">
 			<div class="container">
 				<div class="slick-1" data-slick='{"slidesToShow": 5, "slidesToScroll": 5}'>
 					<div>
@@ -40,10 +40,46 @@
 
 </div>
 <div class="container-fluid">
-	<div class="row discount">
+	<div class="row d-block d-xl-none">
+		<div class="slick-1" data-slick='{"slidesToShow": 3, "slidesToScroll": 3}'>
+			<div>
+				<div class="card " style="margin-left: 15px;margin-right: 15px;">
+					<img src="assets/images/home/home1.jpg" class="card-img" alt="...">
+				</div>
+			</div>
+			<div>
+				<div class="card " style="margin-left: 15px;margin-right: 15px;">
+					<img src="assets/images/home/home2.jpg" class="card-img" alt="...">
+				</div>
+			</div>
+			<div>
+				<div class="card " style="margin-left: 15px;margin-right: 15px;">
+					<img src="assets/images/home/home3.jpg" class="card-img" alt="...">
+				</div>
+			</div>
+			<div>
+				<div class="card " style="margin-left: 15px;margin-right: 15px;">
+					<img src="assets/images/home/home4.jpg" class="card-img" alt="...">
+				</div>
+			</div>
+			<div>
+				<div class="card " style="margin-left: 15px;margin-right: 15px;">
+					<img src="assets/images/home/home5.jpg" class="card-img" alt="...">
+				</div>
+			</div>
+			<div>
+				<div class="card " style="margin-left: 15px;margin-right: 15px;">
+					<img src="assets/images/home/home6.jpg" class="card-img" alt="...">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row row-box home__discount ">
 		<h1>25% DISCOUNT</h1>
-		<p>ON ORDERS BEFORE CHRISTMAS - USE COUPON CODE DEC25</p>
-		<div class="discount-btn mt-4">
+		<p>ON ORDERS BEFORE CHRISTMAS USE COUPON CODE DEC25</p>
+		<div class="home__discount-btn">
 			<button>Shop Women</button>
 			<button>Shop Men</button>
 			<button>Shop Kids</button>
@@ -51,17 +87,17 @@
 	</div>
 </div>
 <div class="container-fluid">
-	<div class="row new-arrivals">
+	<div class="row row-box home__new-arrivals">
 		<h1>NEW ARRIVALS</h1>
 	</div>
 </div>
 
-<div class="container">
+<div class="container-xxl">
 	<div class="row category">
 		<h3>Women's Wear</h3>
 	</div>
-	<div class="row g-5">
-		<div class="col" *ngFor="let product of latestWomenWear">
+	<div class="row">
+		<div class="col-12 col-sm-6 col-lg-4 col-xxl-3" *ngFor="let product of latestWomenWear">
 			<div class="product-card" (click)="viewProduct(product)">
 				<!-- <div class="product-card" target="_blank" [routerLink]="['/select-product/', product.sku]"> -->
 
@@ -87,9 +123,9 @@
 	<div class="row category mt-5">
 		<h3>Men's Wear</h3>
 	</div>
-	<div class="row g-5">
+	<div class="row">
 
-		<div class="col" *ngFor="let productInfo of latestMenWear">
+		<div class="col-12 col-sm-6 col-lg-4 col-xxl-3" *ngFor="let productInfo of latestMenWear">
 			<div class="product-card" (click)="viewProduct(productInfo)">
 				<div class="img-container">
 					<img src="{{productInfo.imgUrl}}">
@@ -113,64 +149,18 @@
 	<div class="row category mt-5">
 		<h3>Kid's Wear</h3>
 	</div>
-	<div class="row g-5">
-
-		<div class="col">
+	<div class="row">
+		<div class="col-12 col-sm-6 col-lg-4 col-xxl-3" *ngFor="let productInfo of latestKidWear">
 			<div class="product-card">
 				<div class="img-container">
-					<img src="assets/images/home/home1.jpg">
+					<img src="{{productInfo.imgUrl}}">
 					<div class="overlay">
 						<p>Quick View</p>
 					</div>
 				</div>
 				<div class="product">
-					<p class="name">I'm a product</p>
-					<p class="price">₹500.00</p>
-				</div>
-
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home2.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
-
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home6.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
-
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home4.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
+					<p class="name">{{productInfo.name}}</p>
+					<p class="price">₹{{productInfo.price}}</p>
 				</div>
 
 			</div>
@@ -183,68 +173,26 @@
 	<div class="row category mt-5">
 		<h3>Women's Footwear</h3>
 	</div>
-	<div class="row g-5">
+	<div class="row ">
 
-		<div class="col">
+		<div class="col-12 col-sm-6 col-lg-4 col-xxl-3" *ngFor="let productInfo of latestWomenFootWear">
 			<div class="product-card">
 				<div class="img-container">
-					<img src="assets/images/home/home1.jpg">
+					<img src="{{productInfo.imgUrl}}">
 					<div class="overlay">
 						<p>Quick View</p>
 					</div>
 				</div>
 				<div class="product">
-					<p class="name">I'm a product</p>
-					<p class="price">₹500.00</p>
+					<p class="name">{{productInfo.name}}</p>
+					<p class="price">{{productInfo.price}}</p>
 				</div>
 
 			</div>
 		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home2.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
 
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home6.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
 
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home4.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
 
-			</div>
-		</div>
 	</div>
 
 </div>
@@ -253,68 +201,27 @@
 	<div class="row category mt-5">
 		<h3>Men's Footwear</h3>
 	</div>
-	<div class="row g-5">
+	<div class="row ">
 
-		<div class="col">
+		<div class="col-12 col-sm-6 col-lg-4 col-xxl-3" *ngFor="let productInfo of latestMenFootWear">
 			<div class="product-card">
 				<div class="img-container">
-					<img src="assets/images/home/home1.jpg">
+					<img src="{{productInfo.imgUrl}}">
 					<div class="overlay">
 						<p>Quick View</p>
 					</div>
 				</div>
 				<div class="product">
-					<p class="name">I'm a product</p>
-					<p class="price">₹500.00</p>
+					<p class="name">{{productInfo.name}}</p>
+					<p class="price">{{productInfo.price}}</p>
 				</div>
+
 
 			</div>
 		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home2.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
 
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home6.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
 
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home4.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
 
-			</div>
-		</div>
 	</div>
 
 </div>
@@ -323,68 +230,24 @@
 	<div class="row category mt-5">
 		<h3>Watches & Accessories</h3>
 	</div>
-	<div class="row g-5">
+	<div class="row">
 
-		<div class="col">
+		<div class="col-12 col-sm-6 col-lg-4 col-xxl-3" *ngFor="let productInfo of latestWatchAccesories">
 			<div class="product-card">
 				<div class="img-container">
-					<img src="assets/images/home/home1.jpg">
+					<img src="{{productInfo.imgUrl}}">
 					<div class="overlay">
 						<p>Quick View</p>
 					</div>
 				</div>
 				<div class="product">
-					<p class="name">I'm a product</p>
-					<p class="price">₹500.00</p>
+					<p class="name">{{productInfo.name}}</p>
+					<p class="price">{{productInfo.price}}</p>
 				</div>
 
 			</div>
 		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home2.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
 
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home6.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
-
-			</div>
-		</div>
-		<div class="col">
-			<div class="product-card">
-				<div class="img-container">
-					<img src="assets/images/home/home4.jpg">
-					<div class="overlay">
-						<p>Quick View</p>
-					</div>
-				</div>
-				<div>
-					<p>I'm a product</p>
-					<p>₹500.00</p>
-				</div>
-
-			</div>
-		</div>
 	</div>
 
 </div>

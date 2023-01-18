@@ -134,31 +134,33 @@
     width: 100%;
     z-index: 8;
     box-shadow: 0 0px 8px rgb(0 0 0 / 0.2);
-    font-size: 18px;
+    font-size: 14px;
 
-    .container {
-        height: 70px;
+    .container-xxl {
+        height: 50px;
     }
 
     .cart__footer-delete {
         color: var(--m-green);
         border: none;
         background: none;
+        display: none;
     }
 
     .cart__footer-selected {
         border-left: 1px solid var(--border-light-variant);
         color: var(--content-light-variant);
-        margin-left: 10px;
-        padding-left: 10px;
+        margin-left: 0px;
+        padding-left: 0px;
+        width: 200px;
     }
 
     .cart__footer-total {
-        margin-right: 30px;
+        margin-right: 15px;
 
         strong {
             color: var(--primary-base);
-            font-size: 22px;
+            font-size: 16px;
             font-weight: 400;
             line-height: 27px;
             text-align: right;
@@ -170,10 +172,10 @@
         background-color: var(--m-green);
         box-sizing: border-box;
         color: #fff;
-        font-size: 22px;
+        font-size: 16px;
         font-weight: 700;
         height: 100%;
-        min-width: 200px;
+        min-width: 100px;
         // padding: 20px;
         width: min-content;
         border: none;
@@ -186,3 +188,53 @@
         }
     }
 }
+
+
+
+// // -------------SMALL DEVICES ---------
+@media(min-width: 576px) {
+    .cart__footer {
+
+        font-size: 18px;
+
+        .container-xxl {
+            height: 70px;
+        }
+
+        .cart__footer-delete {            
+            display: block;
+        }
+
+        .cart__footer-selected {        
+            margin-left: 10px;
+            padding-left: 10px;
+            width: auto;
+        }
+
+        .cart__footer-total {
+            margin-right: 30px;
+            strong {           
+                font-size: 22px;           
+            }
+        }
+
+        .cart__footer-checkout {
+            font-size: 22px;       
+            min-width: 200px;
+        }
+}
+
+}
+
+// // -------------Medium DEVICES ---------
+@media(min-width: 768px) {}
+
+
+// // -------------LARGE DEVICES ---------
+@media(min-width: 992px) {}
+
+// // -------------EXTRA LARGE DEVICES ---------
+@media(min-width: 1200px) {}
+
+// // -------------EXTRA EXTRA LARGE DEVICES ---------
+@media(min-width: 1400px) {}
