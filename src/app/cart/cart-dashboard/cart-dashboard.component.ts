@@ -25,19 +25,10 @@ export class CartDashboardComponent implements OnInit {
 	}
 
 
-<<<<<<< HEAD
-  itemList: Item[] = [
-    { imgUrl: 'assets/images/cart/product1.jpg', name: 'Spring Jacket', brand: 'Dolce & Gabbana', color: 'RED', size: 'M', price: 200, qty: 1 },
-    { imgUrl: 'assets/images/cart/product2.jpg', name: 'T-Shirt', brand: 'Levis', color: 'Green', size: 'L', price: 800, qty: 2 },
-    { imgUrl: 'assets/images/cart/product3.jpg', name: 'Shoes', brand: 'Nike', color: 'Green', size: '41', price: 1250, qty: 4 },
-    { imgUrl: 'assets/images/cart/product4.jpg', name: 'Football', brand: 'Reebok', color: 'White', size: 'Default', price: 20, qty: 1 }
-  ];
-=======
 	increase(index: number) {
 		this.allItem[index].qty = this.allItem[index].qty + 1;
 		this.totalAmt = this.calculateTotalAmt();
 	}
->>>>>>> e02e691fc31b146018b2b31d51c1c752e6f7baea
 
 	decrease(index: number) {
 		if (this.allItem[index].qty > 1) {
@@ -92,6 +83,3 @@ export class CartDashboardComponent implements OnInit {
 		}
 	}
 }
-
-
-
