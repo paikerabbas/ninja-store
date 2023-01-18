@@ -13,11 +13,16 @@ export class SignupPage2Component implements OnInit {
 	ngOnInit(): void {
 
 		$(document).ready(function () {
+
 			$("#branchNameCheck").hide();
 			$("#nameCheck").hide();
+			$("#contactNoCheck").hide();
+			$("#contactNoDigitCheck").hide();
+			$("#onlyNumberCheck").hide();
 
 			let branchNameError = true;
 			let nameError = true;
+			let contactError = true;
 
 			function validateBranchName() {
 				let branchNameValue = $("#branchName").val();
@@ -49,12 +54,32 @@ export class SignupPage2Component implements OnInit {
 				}
 			}
 
+
+
+			function validatContact() {
+				let contactValue = $("#contactNo").val();
+				if (contactValue.length == "") {
+					$("#contactNoCheck").show();
+					$("#contactNoDigitCheck").hide();
+					contactError = false;
+				} else if (contactValue.length < 10 || contactValue.length > 10) {
+					$("#contactNoDigitCheck").show();
+					$("#contactNoCheck").hide();
+					contactError = false;
+				} else {
+					$("#contactNoDigitCheck").hide();
+					$("#contactNoCheck").hide();
+					contactError = true;
+				}
+			}
+
 			$("#submitbtn").click(function () {
 				validateBranchName();
 				validateName();
+				validatContact();
 				if (
 					branchNameError == true &&
-					nameError == true
+					nameError == true && contactError == true
 				) {
 					//TODO write ajax request
 					return true;
@@ -66,6 +91,23 @@ export class SignupPage2Component implements OnInit {
 			});
 		});
 
+	}
+
+	onlyNumberKey(event: any) {
+		if (event.target.value.length > 9) {
+			return false;
+		}
+		// Only ASCII character in that range allowed 
+		var ASCIICode = (event.which) ? event.which : event.keyCode
+		if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+			$("#onlyNumberCheck").show();
+			$("#contactNoDigitCheck").hide();
+			$("#contactNoCheck").hide();
+			return false;
+		} else {
+			$("#onlyNumberCheck").hide();
+			return true;
+		}
 	}
 
 

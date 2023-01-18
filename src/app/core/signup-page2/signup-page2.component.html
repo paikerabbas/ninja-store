@@ -1,6 +1,7 @@
 <div class="container-xxl">
     <div class="row justify-content-center" style="margin-top: 100px;">
         <div class="col-4">
+
             <form>
                 <div class="mb-3 bform-input">
                     <input type="text" class="form-control" id="branchName" placeholder="BRANCH NAME">
@@ -21,8 +22,20 @@
                 <div class="mb-3">
                     <input type="text" class="form-control" id="designation" placeholder="Designation">
                 </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="contactNo" placeholder="Contact No.">
+                <div class="mb-3 bform-input">
+                    <input type="text" class="form-control" id="contactNo" placeholder="Contact No."
+                        (keypress)="onlyNumberKey($event)">
+                    <div class="error-message">
+                        <span id="contactNoCheck">
+                            **Contact No. is missing.
+                        </span>
+                        <span id="contactNoDigitCheck">
+                            **Contact No. should be Only 10 digit.
+                        </span>
+                        <span id="onlyNumberCheck">
+                            **Only numbers are allowed.
+                        </span>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <input type="email" class="form-control" id="email" placeholder="Email">

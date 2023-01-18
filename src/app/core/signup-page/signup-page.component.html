@@ -1,17 +1,13 @@
 <div class="container-fluid">
     <div class="row dashboard user-dashboard signup-wallpaper">
         <div class="caption-signup">
-            <div class="container">
+            <div class="container-xxl">
                 <div class="row justify-content-center">
-                    <div class="col-lg-4">
+                    <div class="col-12 col-sm-8 col-md-6 col-xl-4">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title text-center text-green mb-3">Sign Up</h5>
-                                <span>Valid: {{signupForm.valid}}</span><br>
-                                <span>Invalid :
-                                    {{signupForm.invalid}}</span><br>
-                                <span>dirty : {{signupForm.dirty}}</span><br>
-                                <span>Touchec: {{signupForm.touched}}</span>
+
                                 <form [formGroup]="signupForm" (ngSubmit)="onSignupFormSubmit()" novalidate>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="inputGroup-sizing-default">
