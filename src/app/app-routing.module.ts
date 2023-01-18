@@ -46,6 +46,10 @@ const routes: Routes = [
 		path: 'product-detail', loadChildren: () =>
 			import('./product-detail/product-detail.module').then(m => m.ProductDetailModule)
 	},
+	{
+		path: 'men-wear', loadChildren: () =>
+			import('./men-wear/men-wear.module').then(m => m.MenWearModule)
+	},
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },
 ];
