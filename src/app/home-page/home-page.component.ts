@@ -14,7 +14,7 @@ export class HomePageComponent implements OnInit {
 
 	latestWomenWear: ProductInfo[] = [];
 	latestMenWear: ProductInfo[] = [];
-
+	latestMenfootWear: ProductInfo[] = [];
 
 
 	constructor(private router: Router,
@@ -33,6 +33,12 @@ export class HomePageComponent implements OnInit {
 		this.mainService.getLatestMensWearInfo().subscribe(
 			data => {
 				this.latestMenWear = data;
+			}
+		);
+
+		this.mainService.getLatestMensfootWearInfo().subscribe(
+			data => {
+				this.latestMenfootWear = data;
 			}
 		);
 
