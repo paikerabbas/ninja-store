@@ -2,12 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { of } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { CartProduct, Product, ProductInfo } from './models/product';
+import { User } from './models/user';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class MainService {
+
+	urlPrefix = environment.urlPrefix;
 
 	productSkusSubject$ = new BehaviorSubject<string>('');
 	public productSkusState = this.productSkusSubject$.asObservable();
@@ -20,6 +24,8 @@ export class MainService {
 			this.productSkusSubject$.next(skusString);
 		}
 	}
+
+
 
 	setProductSkuToLocalStorage(sku: string) {
 		let skusString = localStorage.getItem('skus');
