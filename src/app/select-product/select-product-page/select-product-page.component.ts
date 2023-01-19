@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { MainService } from 'src/app/main.service';
-import { CartProduct, Product, ProductInfo } from 'src/app/models/product';
+import { CartProduct, Product, ProductInfo } from 'src/app/_models/product';
 declare var $: any;
 
 @Component({

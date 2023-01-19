@@ -50,6 +50,10 @@ const routes: Routes = [
 		path: 'men-wear', loadChildren: () =>
 			import('./men-wear/men-wear.module').then(m => m.MenWearModule)
 	},
+	{
+		path: 'men-footwear', loadChildren: () =>
+			import('./men-footwear/men-footwear.module').then(m => m.MenFootwearModule)
+	},
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },
 ];

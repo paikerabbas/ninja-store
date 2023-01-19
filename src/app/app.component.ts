@@ -14,4 +14,6 @@ export class AppComponent {
 		window.scrollY >= 100 ? (this.isScrolled = true) : (this.isScrolled = false);
 		// this.num = window.pageYOffset;
 	}
+
+
 }
