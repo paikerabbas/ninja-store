@@ -83,6 +83,3 @@ export class CartDashboardComponent implements OnInit {
 		}
 	}
 }
-
-
-

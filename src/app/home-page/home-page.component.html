@@ -145,6 +145,33 @@
 
 </div>
 
+
+<div class="container ">
+	<div class="row category mt-5">
+		<h3>Men's Wear</h3>
+	</div>
+	<div class="row">
+
+		<div class="col-12 col-sm-6 col-lg-4 col-xxl-3" *ngFor="let productInfo of latestMenWear">
+			<div class="product-card" (click)="viewProduct(productInfo)">
+				<div class="img-container">
+					<img src="{{productInfo.imgUrl}}">
+					<div class="overlay">
+						<p>Quick View</p>
+					</div>
+				</div>
+				<div class="product">
+					<p class="name">{{productInfo.name}}</p>
+					<p class="price">₹{{productInfo.price}}</p>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
 <div class="container ">
 	<div class="row category mt-5">
 		<h3>Kid's Wear</h3>
