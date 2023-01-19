@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { of } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { CartProduct, Product, ProductInfo } from './models/product';
-import { User } from './models/user';
+import { CartProduct, Product, ProductInfo } from './_models/product';
+import { User } from './_models/user';
 
 @Injectable({
 	providedIn: 'root'

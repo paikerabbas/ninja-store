@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from 'src/app/main.service';
-import { CartProduct } from 'src/app/models/product';
+import { CartProduct } from 'src/app/_models/product';
 
 @Component({
 	selector: 'app-cart-dashboard',

@@ -8,3 +8,8 @@ export interface User {
     country: string;
     password: string;
 }
+
+export interface AuthResponse {
+    token: string;
+    user: User;
+}

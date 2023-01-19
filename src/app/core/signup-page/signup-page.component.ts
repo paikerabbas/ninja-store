@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/auth.service';
-import { MainService } from 'src/app/main.service';
-import { User } from 'src/app/models/user';
+import { AuthenticationService } from 'src/app/_services/authentication.service';
 
 @Component({
 	selector: 'app-signup-page',
@@ -14,7 +12,7 @@ export class SignupPageComponent implements OnInit {
 
 
 	constructor(private fb: FormBuilder,
-		private authService: AuthService) {
+		private authenticationService: AuthenticationService) {
 	}
 
 	ngOnInit(): void {
@@ -28,7 +26,7 @@ export class SignupPageComponent implements OnInit {
 		}
 		// let user: User = this.signupForm.value as User;
 		console.log(this.signupForm.value)
-		this.authService.registerUser(this.signupForm.value).subscribe(
+		this.authenticationService.registerUser(this.signupForm.value).subscribe(
 			data => {
 				alert(JSON.stringify(data));
 			}
