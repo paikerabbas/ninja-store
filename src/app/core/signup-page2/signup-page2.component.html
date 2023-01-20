@@ -1,8 +1,12 @@
 <div class="container-xxl">
-    <div class="row justify-content-center" style="margin-top: 100px;">
+    <div class="row justify-content-center" style="margin-top: 200px;">
         <div class="col-4">
 
             <form>
+                <div class="error-message signupForm__error-div">
+                    <span id="formErrorMsg" class="signupForm__error-msg">
+                    </span>
+                </div>
                 <div class="progress form-progress" role="progressbar" aria-label="Default striped example"
                     aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                     <div class="progress-bar progress-bar-striped" style="width: 70%"></div>
@@ -10,19 +14,10 @@
                 <br>
                 <div class="mb-3 bform-input">
                     <input type="text" class="form-control" id="branchName" placeholder="BRANCH NAME">
-                    <div class="error-message">
-                        <span id="branchNameCheck">
-                            **Branch name is missing
-                        </span>
-                    </div>
                 </div>
                 <div class="mb-3 bform-input">
-                    <input type="text" class="form-control" id="name" placeholder="Name">
-                    <div class="error-message">
-                        <span id="nameCheck">
-                            **Name is missing
-                        </span>
-                    </div>
+                    <input type="text" class="form-control" id="name" placeholder="Name" (keyup)="validateName($event)">
+
                 </div>
                 <div class="mb-3">
                     <input type="text" class="form-control" id="designation" placeholder="Designation">
@@ -30,7 +25,7 @@
                 <div class="mb-3 bform-input">
                     <input type="text" class="form-control" id="contactNo" placeholder="Contact No."
                         (keypress)="onlyNumberKey($event)">
-                    <div class="error-message">
+                    <!-- <div class="error-message">
                         <span id="contactNoCheck">
                             **Contact No. is missing.
                         </span>
@@ -40,7 +35,7 @@
                         <span id="onlyNumberCheck">
                             **Only numbers are allowed.
                         </span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="mb-3">
                     <input type="email" class="form-control" id="email" placeholder="Email">

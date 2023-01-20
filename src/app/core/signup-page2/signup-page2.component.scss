@@ -12,3 +12,13 @@
     height: 7px;
     border-radius: 0;
 }
+
+.signupForm__error-div{
+    height: 25px;
+}
+
+.signupForm__error-div .signupForm__error-msg{
+    color: red;
+    font-size: 13px;
+    font-weight: 600;
+}
