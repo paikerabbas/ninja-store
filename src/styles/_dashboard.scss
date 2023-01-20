@@ -1,6 +1,6 @@
 .dashboard {
     position: relative;
-    height: 90vh !important;
+    height: 90vh !important; //viewport height
 
     .caption {
         color: white;
@@ -30,6 +30,10 @@
             text-align: center;
         }
     }
+}
+
+.dashboard-70vh{
+     height: 70vh !important; //viewport height
 }
 
 .user-dashboard {
@@ -68,6 +72,12 @@
 }
 
 .signup-wallpaper {
+    background-image: url(../assets/images/home/signup.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+.watch-access-wallpaper{
     background-image: url(../assets/images/home/signup.jpg);
     background-size: cover;
     background-position: top center;

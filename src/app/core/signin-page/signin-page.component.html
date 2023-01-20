@@ -9,7 +9,7 @@
         <img src="assets/images/login3.webp">
     </div>
     <div class="lp-right">
-        <div class="row p-5 mx-0">
+        <div class="row p-5 mx-0 signupform__div">
             <div class="col">
                 <form [formGroup]="signinForm" (ngSubmit)="onSigninFormSubmit()" novalidate>
                     <h3>Sign In</h3>
@@ -77,6 +77,11 @@
                 </div>
 
 
+            </div>
+            <div class="signupform__spinner">
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
             </div>
         </div>
     </div>
