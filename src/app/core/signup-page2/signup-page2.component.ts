@@ -39,20 +39,7 @@ export class SignupPage2Component implements OnInit {
 				}
 			}
 
-			function validateName() {
-				let nameValue = $("#name").val();
-				if (nameValue.length == "") {
-					$("#nameCheck").show();
-					nameError = false;
-				} else if (nameValue.length < 3 || nameValue.length > 10) {
-					$("#nameCheck").show();
-					// $("#usercheck").html("**length of username must be between 3 and 10");
-					nameError = false;
-				} else {
-					nameError = true;
-					$("#nameCheck").hide();
-				}
-			}
+
 
 
 
@@ -75,7 +62,7 @@ export class SignupPage2Component implements OnInit {
 
 			$("#submitbtn").click(function () {
 				validateBranchName();
-				validateName();
+				// validateName();
 				validatContact();
 				if (
 					branchNameError == true &&
@@ -93,19 +80,34 @@ export class SignupPage2Component implements OnInit {
 
 	}
 
+	validateName(event: any) {
+		$("#formErrorMsg").html("");
+		if (event.target.value.length == "") {
+			$("#formErrorMsg").html("** Name is missing.");
+			return false;
+		} else if (event.target.value.length < 3 || event.target.value.length > 10) {
+			$("#formErrorMsg").html("** Name must be between 3 and 10");
+			// $("#usercheck").html("**length of username must be between 3 and 10");
+			return false;
+		} else {
+			$("#formErrorMsg").html("");
+			return true;
+		}
+	}
+
 	onlyNumberKey(event: any) {
+		var errmsg = $("#formErrorMsg");
+		errmsg.html("");
 		if (event.target.value.length > 9) {
 			return false;
 		}
 		// Only ASCII character in that range allowed 
 		var ASCIICode = (event.which) ? event.which : event.keyCode
 		if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
-			$("#onlyNumberCheck").show();
-			$("#contactNoDigitCheck").hide();
-			$("#contactNoCheck").hide();
+			errmsg.html("**Only numbers are allowed.");
 			return false;
 		} else {
-			$("#onlyNumberCheck").hide();
+			errmsg.html("");
 			return true;
 		}
 	}

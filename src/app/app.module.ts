@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,8 +12,8 @@ import { ToolbarComponent } from './core/toolbar/toolbar.component';
 import { NotificationComponent } from './core/notification/notification.component';
 import { HeaderComponent } from './core/header/header.component';
 import { SigninPageComponent } from './core/signin-page/signin-page.component';
-import { SignupPageComponent } from './core/signup-page/signup-page.component';
 import { SignupPage2Component } from './core/signup-page2/signup-page2.component';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,6 @@ import { SignupPage2Component } from './core/signup-page2/signup-page2.component
     ToolbarComponent,
     NotificationComponent,
     SigninPageComponent,
-    SignupPageComponent,
     SignupPage2Component,
   ],
   imports: [
@@ -34,7 +33,9 @@ import { SignupPage2Component } from './core/signup-page2/signup-page2.component
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,7 +4,6 @@ import { CustomerCareComponent } from './core/customer-care/customer-care.compon
 import { NotificationComponent } from './core/notification/notification.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { SigninPageComponent } from './core/signin-page/signin-page.component';
-import { SignupPageComponent } from './core/signup-page/signup-page.component';
 import { SignupPage2Component } from './core/signup-page2/signup-page2.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
@@ -13,7 +12,7 @@ const routes: Routes = [
 	{ path: 'notification', component: NotificationComponent },
 	{ path: 'customer-care', component: CustomerCareComponent },
 	{ path: 'signin', component: SigninPageComponent },
-	{ path: 'signup', component: SignupPageComponent },
+	{ path: 'signup', component: SignupPage2Component },
 	{
 		path: 'cart', loadChildren: () =>
 			import('./cart/cart.module').then(m => m.CartModule)
@@ -46,8 +45,23 @@ const routes: Routes = [
 		path: 'product-detail', loadChildren: () =>
 			import('./product-detail/product-detail.module').then(m => m.ProductDetailModule)
 	},
+<<<<<<< HEAD
 	
 	
+=======
+	{
+		path: 'men-wear', loadChildren: () =>
+			import('./men-wear/men-wear.module').then(m => m.MenWearModule)
+	},
+	{
+		path: 'men-footwear', loadChildren: () =>
+			import('./men-footwear/men-footwear.module').then(m => m.MenFootwearModule)
+	},
+	{
+		path: 'watch-accessories', loadChildren: () =>
+			import('./watch-accessories/watch-accessories.module').then(m => m.WatchAccessoriesModule)
+	},
+>>>>>>> dev
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },
 ];
