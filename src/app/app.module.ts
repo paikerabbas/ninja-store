@@ -12,7 +12,6 @@ import { ToolbarComponent } from './core/toolbar/toolbar.component';
 import { NotificationComponent } from './core/notification/notification.component';
 import { HeaderComponent } from './core/header/header.component';
 import { SigninPageComponent } from './core/signin-page/signin-page.component';
-import { SignupPageComponent } from './core/signup-page/signup-page.component';
 import { SignupPage2Component } from './core/signup-page2/signup-page2.component';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 
@@ -26,7 +25,6 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
     ToolbarComponent,
     NotificationComponent,
     SigninPageComponent,
-    SignupPageComponent,
     SignupPage2Component,
   ],
   imports: [
