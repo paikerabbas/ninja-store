@@ -1,2 +1,76 @@
-<p>menwear-dashboard works!</p>
-<h1>Hello</h1>
+<div class="container-fluid">
+    <div class="row dashboard dashboard-70vh home-wallpaper">
+        <div class="caption d-none d-xl-block">
+            <h1>ROLEX and RADO</h1>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row dashboard__heading">
+        <h2>BIGGEST DEALS ON TOP BRANDS</h2>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3" *ngFor="let brand of topBrands">
+            <div class="product-card">
+                <!-- <div class="product-card" target="_blank" [routerLink]="['/select-product/', product.sku]"> -->
+
+                <div class="img-container">
+                    <img src="{{brand.imgUrl}}">
+                    <div class="overlay">
+                        <p>Quick View</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <p class="name">{{brand.name}}</p>
+                    <p class="price">₹{{brand.price}}</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row dashboard__heading">
+        <h2>CATEGORIES TO BAG</h2>
+    </div>
+    <div class="row">
+        <div class="col-3" *ngFor="let catgy of categoriesToBag">
+            <div class="dashboard__card-rounded">
+                <div class="dashboard__card-rounded-img">
+                    <img src="{{catgy.imgUrl}}">
+                </div>
+                <div class="dashboard__card-rounded-name">
+                    <p>{{catgy.name}}</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row dashboard__heading">
+        <h2>TRENDING IN INDIAN WEAR</h2>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row dashboard__heading">
+        <h2>TRENDING IN SPORTS WEAR</h2>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row dashboard__heading">
+        <h2>TRENDING IN FOOTWEAR</h2>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row dashboard__heading">
+        <h2>TRENDING IN ACCESSORIES</h2>
+    </div>
+</div>
