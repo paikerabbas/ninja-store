@@ -36,7 +36,7 @@
         <h2>CATEGORIES TO BAG</h2>
     </div>
     <div class="row">
-        <div class="col-3" *ngFor="let catgy of categoriesToBag">
+        <div class="col-2" *ngFor="let catgy of categoriesToBag">
             <div class="dashboard__card-rounded">
                 <div class="dashboard__card-rounded-img">
                     <img src="{{catgy.imgUrl}}">
@@ -53,7 +53,47 @@
 
 <div class="container-fluid">
     <div class="row dashboard__heading">
+        <h2>NINJA LUXURY</h2>
+    </div>
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-3">
+        <div class="col" *ngFor="let catgy of categoriesToBag">
+            <div class="dashboard__card-bordered">
+                <div class="dashboard__card-bordered-img">
+                    <img src="{{catgy.imgUrl}}">
+                </div>
+                <div class="dashboard__card-bordered-caption">
+                    <div class="caption-icon">
+                        <img src="assets/images/home/home2.jpg">
+                    </div>
+                    <div class="caption-title">{{catgy.name}}</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row dashboard__heading">
         <h2>TRENDING IN INDIAN WEAR</h2>
+    </div>
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-3 ">
+        <div class="col " *ngFor="let catgy of categoriesToBag2">
+            <div class="dashboard__card-trend">
+                <div class="dashboard__card-trend-img">
+                    <img src="{{catgy.imgUrl}}">
+                    <div class="overlay">
+                        Quick View
+                    </div>
+                </div>
+                <div class="dashboard__card-trend-product">
+                    <div class="name">{{catgy.name}}</div>
+                    <div class="price">₹{{catgy.price}}</div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
 

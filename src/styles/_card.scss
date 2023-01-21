@@ -37,6 +37,7 @@
     .img-container {
         position: relative;
         cursor: pointer;
+
         img {
             width: 100%;
             height: 350px;
@@ -83,24 +84,207 @@
     }
 }
 
-.dashboard__card-rounded{
+.dashboard__card-rounded {
     background-color: #f1f1f1;
     padding: 15px;
-    .dashboard__card-rounded-img{
+
+    .dashboard__card-rounded-img {
         text-align: center;
-       img{
+
+        img {
             width: 200px;
             height: 200px;
             border: 4px solid white;
             border-radius: 50%;
-       }
+        }
     }
 
-    .dashboard__card-rounded-name{
-        p{
+    .dashboard__card-rounded-name {
+        p {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: 600;
         }
     }
 }
+
+.dashboard__card-bordered {
+    border: 4px solid var(--m-green);
+    position: relative;
+    cursor: pointer;
+
+    .dashboard__card-bordered-img {
+        img {
+            width: 100%;
+            height: 180px;
+        }
+    }
+
+    .dashboard__card-bordered-caption {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        text-align: center;
+        right: 0;
+
+        .caption-icon {
+            img {
+                width: 60px;
+                height: 30px;
+            }
+        }
+
+        .caption-title {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.dashboard__card-trend {
+
+    .dashboard__card-trend-img {
+        position: relative;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 150px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            // background: rgb(0, 0, 0);
+            background: rgba(var(--m-green-rgb), 0.5);
+            /* Black see-through */
+            color: #f1f1f1;
+            width: 100%;
+            transition: .5s ease;
+            opacity: 0;
+            font-size: 0.8rem;
+            padding: 10px 20px;
+            text-align: center;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+
+    }
+
+    .dashboard__card-trend-product {
+        background-color: #f1f1f1;
+        padding: 4px 15px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        transition: .5s ease;
+        cursor: pointer;
+
+        .name {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 0.7rem;
+        }
+    }
+
+    &:hover .dashboard__card-trend-img .overlay {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        opacity: 1;
+    }
+
+    // &:hover .dashboard__card-trend-img img {
+    //     border-bottom-left-radius: 0px;
+    //     border-bottom-right-radius: 0px;
+    // }
+
+    &:hover .dashboard__card-trend-product {
+        background-color: var(--m-green);
+        color: white;
+    }
+}
+
+
+// // -------------SMALL DEVICES ---------
+@media(min-width: 576px) {}
+
+// // -------------Medium DEVICES ---------
+@media(min-width: 768px) {}
+
+
+// // -------------LARGE DEVICES ---------
+@media(min-width: 992px) {
+
+    .dashboard__card-bordered {
+        border: 4px solid var(--m-green);
+        position: relative;
+
+        .dashboard__card-bordered-img {
+            img {
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+        .dashboard__card-bordered-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            right: 0;
+
+            .caption-icon {
+                img {
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+
+            .caption-title {
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .dashboard__card-trend {
+
+        .dashboard__card-trend-img {
+
+            img {
+                height: 250px;
+            }
+
+            .overlay {
+                font-size: 20px;
+                padding: 10px 20px;
+            }
+        }
+
+        .dashboard__card-trend-product {
+            padding: 8px 15px;
+
+            .name {
+                font-size: 1.2rem;
+            }
+
+            .price {
+                font-size: 0.8rem;
+            }
+        }
+
+    }
+}
+
+// // -------------EXTRA LARGE DEVICES ---------
+@media(min-width: 1200px) {}
+
+// // -------------EXTRA EXTRA LARGE DEVICES ---------
+@media(min-width: 1400px) {}
