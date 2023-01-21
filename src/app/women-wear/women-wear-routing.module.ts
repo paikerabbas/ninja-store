@@ -1,9 +1,10 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { WomenwearDashboardComponent } from './womenwear-dashboard/womenwear-dashboard.component';
 
-const routes: Routes = [];
+
 const routes: Routes = [
-  { path: '', component: women-wear page Component}
+  { path: '', component: WomenwearDashboardComponent}
 ];
 
 @NgModule({

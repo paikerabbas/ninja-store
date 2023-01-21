@@ -45,10 +45,6 @@ const routes: Routes = [
 		path: 'product-detail', loadChildren: () =>
 			import('./product-detail/product-detail.module').then(m => m.ProductDetailModule)
 	},
-<<<<<<< HEAD
-	
-	
-=======
 	{
 		path: 'men-wear', loadChildren: () =>
 			import('./men-wear/men-wear.module').then(m => m.MenWearModule)
@@ -61,7 +57,10 @@ const routes: Routes = [
 		path: 'watch-accessories', loadChildren: () =>
 			import('./watch-accessories/watch-accessories.module').then(m => m.WatchAccessoriesModule)
 	},
->>>>>>> dev
+	{
+		path: 'women-wear', loadChildren: () =>
+			import('./women-wear/women-wear.module').then(m => m.WomenWearModule)
+	},
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },
 ];
