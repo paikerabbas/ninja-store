@@ -67,6 +67,58 @@ export class MenwearDashboardComponent implements OnInit {
 			price: 300,
 			imgUrl: 'assets/images/home/home14.jpg'
 		},
+		{
+			sku: 'KSR83789',
+			name: 'Jeans',
+			price: 600,
+			imgUrl: 'assets/images/home/home13.jpg'
+		},
+		{
+			sku: 'IRO5769',
+			name: 'Trouser',
+			price: 300,
+			imgUrl: 'assets/images/home/home14.jpg'
+		}
+
+	];
+
+	categoriesToBag2: ProductInfo[] = [
+		{
+			sku: 'WGH5364',
+			name: 'All White Indian Wear',
+			price: 500,
+			imgUrl: 'assets/images/home/home11.jpg'
+		},
+		{
+			sku: 'HFD529',
+			name: 'Ethnic Casuals',
+			price: 7800,
+			imgUrl: 'assets/images/home/home12.jpg'
+		},
+		{
+			sku: 'KSR83789',
+			name: 'Printed Kurta Sets',
+			price: 600,
+			imgUrl: 'assets/images/home/home13.jpg'
+		},
+		{
+			sku: 'IRO5769',
+			name: 'Everyday Kurtas',
+			price: 300,
+			imgUrl: 'assets/images/home/home14.jpg'
+		},
+		{
+			sku: 'KSR83789',
+			name: 'Handpicked Trendy',
+			price: 600,
+			imgUrl: 'assets/images/home/home16.jpg'
+		},
+		{
+			sku: 'KSR83789',
+			name: 'Handpicked Trendy ',
+			price: 600,
+			imgUrl: 'assets/images/home/home15.jpg'
+		}
 
 	];
 
