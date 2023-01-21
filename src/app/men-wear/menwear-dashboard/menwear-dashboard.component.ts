@@ -38,6 +38,18 @@ export class MenwearDashboardComponent implements OnInit {
 			price: 300,
 			imgUrl: 'assets/images/home/home4.jpg'
 		},
+		{
+			sku: 'KSR83789',
+			name: 'LEVIS TWO',
+			price: 600,
+			imgUrl: 'assets/images/home/home13.jpg'
+		},
+		{
+			sku: 'IRO5769',
+			name: 'KILLER TWO',
+			price: 300,
+			imgUrl: 'assets/images/home/home14.jpg'
+		},
 
 	];
 

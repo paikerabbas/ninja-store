@@ -9,15 +9,15 @@
     <div class="row dashboard__heading">
         <h2>BIGGEST DEALS ON TOP BRANDS</h2>
     </div>
-    <div class="row">
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3" *ngFor="let brand of topBrands">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-5 row-cols-xxl-6 g-3">
+        <div class="col" *ngFor="let brand of topBrands">
             <div class="product-card">
                 <!-- <div class="product-card" target="_blank" [routerLink]="['/select-product/', product.sku]"> -->
 
                 <div class="img-container">
                     <img src="{{brand.imgUrl}}">
                     <div class="overlay">
-                        <p>Quick View</p>
+                        Quick View
                     </div>
                 </div>
                 <div class="product">
@@ -35,14 +35,14 @@
     <div class="row dashboard__heading">
         <h2>CATEGORIES TO BAG</h2>
     </div>
-    <div class="row">
-        <div class="col-2" *ngFor="let catgy of categoriesToBag">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-5 row-cols-xxl-6 g-3">
+        <div class="col" *ngFor="let catgy of categoriesToBag">
             <div class="dashboard__card-rounded">
                 <div class="dashboard__card-rounded-img">
                     <img src="{{catgy.imgUrl}}">
                 </div>
                 <div class="dashboard__card-rounded-name">
-                    <p>{{catgy.name}}</p>
+                    {{catgy.name}}
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
     <div class="row dashboard__heading">
         <h2>NINJA LUXURY</h2>
     </div>
-    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-3">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-5 row-cols-xxl-6 g-3">
         <div class="col" *ngFor="let catgy of categoriesToBag">
             <div class="dashboard__card-bordered">
                 <div class="dashboard__card-bordered-img">
@@ -78,7 +78,7 @@
     <div class="row dashboard__heading">
         <h2>TRENDING IN INDIAN WEAR</h2>
     </div>
-    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-3 ">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-5 row-cols-xxl-6 g-3 ">
         <div class="col " *ngFor="let catgy of categoriesToBag2">
             <div class="dashboard__card-trend">
                 <div class="dashboard__card-trend-img">
