@@ -4,7 +4,7 @@ import { CustomerCareComponent } from './core/customer-care/customer-care.compon
 import { NotificationComponent } from './core/notification/notification.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { SigninPageComponent } from './core/signin-page/signin-page.component';
-import { SignupPage2Component } from './core/signup-page2/signup-page2.component';
+import { SignupPageComponent } from './core/signup-page/signup-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
@@ -12,7 +12,7 @@ const routes: Routes = [
 	{ path: 'notification', component: NotificationComponent },
 	{ path: 'customer-care', component: CustomerCareComponent },
 	{ path: 'signin', component: SigninPageComponent },
-	{ path: 'signup', component: SignupPage2Component },
+	{ path: 'signup', component: SignupPageComponent },
 	{
 		path: 'cart', loadChildren: () =>
 			import('./cart/cart.module').then(m => m.CartModule)
