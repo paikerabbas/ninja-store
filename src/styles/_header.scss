@@ -1,4 +1,4 @@
-.bd-navbar {
+.header__navbar {
     margin-top: 25px;
     // position: fixed;
     // padding: 2rem 0;
@@ -44,8 +44,19 @@
     // box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
 
+.header__nav {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.header__nav-scroll {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0;
+}
+
 .bd-gutter {
     --bs-gutter-x: 3rem;
+
 }
 
 .header__cart-icon {
@@ -73,6 +84,109 @@
     }
 }
 
+
+.header__nav-dropdown {
+    .nav-link {
+        cursor: pointer;
+        border-bottom: 4px solid transparent;
+
+        &:hover {
+            border-color: var(--m-green);
+        }
+    }
+}
+
+.header__nav-dropdown-content {
+    position: absolute;
+    // display: none;
+    width: 70vw;
+    background-color: white;
+    left: 50%;
+    top: 56px;
+    transform: translateX(-50%);
+
+    .header__nav-dropdown-row {
+        .col:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+    }
+
+    .header__nav-dropdown-item {
+        padding: 15px 0;
+
+        a {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 2px;
+
+            &:hover {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.header__nav-link-men {
+
+    &:hover .header__nav-content-men {
+        background-color: red;
+    }
+
+}
+
+.header__nav-content-men {
+    display: block;
+}
+
+.header__nav-link-women {
+
+    &:hover .header__nav-content-women {
+        display: block;
+    }
+
+}
+
+.header__nav-content-women {
+    display: none;
+}
+
+.header__nav-link-kids {
+
+    &:hover .header__nav-content-kids {
+        display: block;
+    }
+
+}
+
+.header__nav-content-kids {
+    display: none;
+}
+
+.header__nav-link-home {
+
+    &:hover .header__nav-content-home {
+        display: block;
+    }
+
+}
+
+.header__nav-content-home {
+    display: none;
+}
+
+.header__nav-link-beauty {
+
+    &:hover .header__nav-content-beauty {
+        display: block;
+    }
+
+}
+
+.header__nav-content-beauty {
+    display: none;
+}
 
 // @media(min-width: 576px) {}
 

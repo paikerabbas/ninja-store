@@ -13,6 +13,28 @@ const routes: Routes = [
 	{ path: 'customer-care', component: CustomerCareComponent },
 	{ path: 'signin', component: SigninPageComponent },
 	{ path: 'signup', component: SignupPageComponent },
+	// Main category links
+	{
+		path: 'men', loadChildren: () =>
+			import('./men/men.module').then(m => m.MenModule)
+	},
+	{
+		path: 'women', loadChildren: () =>
+			import('./women/women.module').then(m => m.WomenModule)
+	},
+	{
+		path: 'kids', loadChildren: () =>
+			import('./kids/kids.module').then(m => m.KidsModule)
+	},
+	{
+		path: 'home-and-living', loadChildren: () =>
+			import('./home-living/home-living.module').then(m => m.HomeLivingModule)
+	},
+	{
+		path: 'beauty', loadChildren: () =>
+			import('./beauty/beauty.module').then(m => m.BeautyModule)
+	},
+	//sub category links
 	{
 		path: 'cart', loadChildren: () =>
 			import('./cart/cart.module').then(m => m.CartModule)
