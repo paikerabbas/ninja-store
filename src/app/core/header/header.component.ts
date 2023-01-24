@@ -14,18 +14,18 @@ export class HeaderComponent implements OnInit {
 	productSkuList: string[] = [];
 	subscription = new Subscription();
 
-	@ViewChildren('abc', { read: ElementRef }) childComp!: QueryList<ElementRef>
 
 	constructor(private mainService: MainService, private renderer: Renderer2, private elementRef: ElementRef) { }
 
 	ngOnInit(): void {
 		this.getCartList();
 	}
-
+	btnElement: any;
 	ngAfterViewChecked() {
-		const btnElement = (<HTMLElement>this.elementRef.nativeElement).querySelectorAll('.header__nav-dropdown-content');
-		console.log(btnElement.length)
+		this.btnElement = (<HTMLElement>this.elementRef.nativeElement).querySelectorAll('.header__nav-dropdown-content');
+		// console.log(btnElement.length)
 	}
+
 	getCartList() {
 		const skuSub = this.mainService.productSkusState.subscribe(
 			data => {
