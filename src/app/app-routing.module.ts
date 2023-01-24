@@ -34,6 +34,19 @@ const routes: Routes = [
 		path: 'beauty', loadChildren: () =>
 			import('./beauty/beauty.module').then(m => m.BeautyModule)
 	},
+	//Men Sub Item links
+	{
+		path: 'mens-tshirt', loadChildren: () =>
+			import('./men-subitem/men-tshirt/men-tshirt.module').then(m => m.MenTshirtModule)
+	},
+	{
+		path: 'mens-casual-shirt', loadChildren: () =>
+			import('./men-subitem/men-casual-shirt/men-casual-shirt.module').then(m => m.MenCasualShirtModule)
+	},
+	{
+		path: 'mens-formal-shirt', loadChildren: () =>
+			import('./men-subitem/men-formal-shirt/men-formal-shirt.module').then(m => m.MenFormalShirtModule)
+	},
 	//sub category links
 	{
 		path: 'cart', loadChildren: () =>

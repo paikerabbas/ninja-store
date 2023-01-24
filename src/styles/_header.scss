@@ -84,27 +84,41 @@
     }
 }
 
-
+.header__navbar-nav{
+    li{
+         margin-left: 5px;
+    }
+}
 .header__nav-dropdown {
     .nav-link {
         cursor: pointer;
-        border-bottom: 4px solid transparent;
-
-        &:hover {
+        border-bottom: 4px solid transparent;       
+        line-height: 2rem;
+        padding: 8px 5px 4px 5px;
+       
+        &:hover{
             border-color: var(--m-green);
         }
+    }
+     &:hover .header__nav-dropdown-content {
+        display: block;
+        -webkit-animation: headerNavDDContentFadeIn 1s;
+        animation: headerNavDDContentFadeIn 1s;
+       
     }
 }
 
 .header__nav-dropdown-content {
     position: absolute;
-    // display: none;
+    display: none;
     width: 70vw;
     background-color: white;
     left: 50%;
     top: 56px;
     transform: translateX(-50%);
-
+    &:hover .header__nav-dropdown  {         
+        border-color: var(--m-green);        
+    }
     .header__nav-dropdown-row {
         .col:nth-child(even) {
             background-color: #f7f7f7;
@@ -128,65 +142,15 @@
     }
 }
 
-.header__nav-link-men {
-
-    &:hover .header__nav-content-men {
-        background-color: red;
-    }
-
+@-webkit-keyframes headerNavDDContentFadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes headerNavDDContentFadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
 }
 
-.header__nav-content-men {
-    display: block;
-}
-
-.header__nav-link-women {
-
-    &:hover .header__nav-content-women {
-        display: block;
-    }
-
-}
-
-.header__nav-content-women {
-    display: none;
-}
-
-.header__nav-link-kids {
-
-    &:hover .header__nav-content-kids {
-        display: block;
-    }
-
-}
-
-.header__nav-content-kids {
-    display: none;
-}
-
-.header__nav-link-home {
-
-    &:hover .header__nav-content-home {
-        display: block;
-    }
-
-}
-
-.header__nav-content-home {
-    display: none;
-}
-
-.header__nav-link-beauty {
-
-    &:hover .header__nav-content-beauty {
-        display: block;
-    }
-
-}
-
-.header__nav-content-beauty {
-    display: none;
-}
 
 // @media(min-width: 576px) {}
 
