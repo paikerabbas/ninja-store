@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { MainService } from 'src/app/main.service';
 import { Subscription } from 'rxjs';
 
@@ -14,10 +14,16 @@ export class HeaderComponent implements OnInit {
 	productSkuList: string[] = [];
 	subscription = new Subscription();
 
-	constructor(private mainService: MainService) { }
+
+	constructor(private mainService: MainService, private renderer: Renderer2, private elementRef: ElementRef) { }
 
 	ngOnInit(): void {
 		this.getCartList();
+	}
+	btnElement: any;
+	ngAfterViewChecked() {
+		this.btnElement = (<HTMLElement>this.elementRef.nativeElement).querySelectorAll('.header__nav-dropdown-content');
+		// console.log(btnElement.length)
 	}
 
 	getCartList() {

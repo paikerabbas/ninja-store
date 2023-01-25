@@ -1,4 +1,4 @@
-.bd-navbar {
+.header__navbar {
     margin-top: 25px;
     // position: fixed;
     // padding: 2rem 0;
@@ -44,8 +44,19 @@
     // box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
 
+.header__nav {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.header__nav-scroll {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0;
+}
+
 .bd-gutter {
     --bs-gutter-x: 3rem;
+
 }
 
 .header__cart-icon {
@@ -70,6 +81,121 @@
     .header__cart-icon-span {
         background-color: #000;
         color: white;
+    }
+}
+
+.scroll-navbar-li {
+    li {
+        &:hover {
+            border-color: black !important;
+        }
+    }
+}
+
+.header__navbar-nav {
+    height: 55px;
+
+    li {
+        cursor: pointer;
+        margin-left: 5px;
+        border-bottom: 4px solid transparent;
+
+        .header__nav-dropdown {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        &:hover {
+            border-color: var(--m-green);
+        }
+
+        &:hover .header__nav-dropdown-content {
+            display: block;
+            -webkit-animation: headerNavDDContentFadeIn 1s;
+            animation: headerNavDDContentFadeIn 1s;
+
+        }
+    }
+}
+
+
+.header__nav-dropdown-content {
+    position: absolute;
+    display: none;
+    width: 70vw;
+    background-color: white;
+    left: 50%;
+    top: 55px;
+    transform: translateX(-50%);
+    box-shadow: 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+
+    // &:hover .header__nav-dropdown {
+    //     border-color: var(--m-green);
+    // }
+
+    .header__nav-dropdown-row {
+        .col:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+    }
+
+    .header__nav-dropdown-item {
+        padding: 15px 0;
+
+        a {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 2px;
+
+            &:hover {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .header__nav-item-account {
+        padding: 0;
+
+        a {
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 10px 15px;
+            color: #424242;
+
+            &:hover {
+                background-color: #f1f1f1;
+            }
+        }
+    }
+}
+
+.header__nav-dropdown-account {
+    width: 250px;
+    left: auto;
+    right: 100px;
+    transform: none;
+}
+
+@-webkit-keyframes headerNavDDContentFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes headerNavDDContentFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 

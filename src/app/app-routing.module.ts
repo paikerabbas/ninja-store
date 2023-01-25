@@ -4,7 +4,7 @@ import { CustomerCareComponent } from './core/customer-care/customer-care.compon
 import { NotificationComponent } from './core/notification/notification.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { SigninPageComponent } from './core/signin-page/signin-page.component';
-import { SignupPage2Component } from './core/signup-page2/signup-page2.component';
+import { SignupPageComponent } from './core/signup-page/signup-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
@@ -12,7 +12,42 @@ const routes: Routes = [
 	{ path: 'notification', component: NotificationComponent },
 	{ path: 'customer-care', component: CustomerCareComponent },
 	{ path: 'signin', component: SigninPageComponent },
-	{ path: 'signup', component: SignupPage2Component },
+	{ path: 'signup', component: SignupPageComponent },
+	// Main category links
+	{
+		path: 'men', loadChildren: () =>
+			import('./men/men.module').then(m => m.MenModule)
+	},
+	{
+		path: 'women', loadChildren: () =>
+			import('./women/women.module').then(m => m.WomenModule)
+	},
+	{
+		path: 'kids', loadChildren: () =>
+			import('./kids/kids.module').then(m => m.KidsModule)
+	},
+	{
+		path: 'home-and-living', loadChildren: () =>
+			import('./home-living/home-living.module').then(m => m.HomeLivingModule)
+	},
+	{
+		path: 'beauty', loadChildren: () =>
+			import('./beauty/beauty.module').then(m => m.BeautyModule)
+	},
+	//Men Sub Item links
+	{
+		path: 'mens-tshirt', loadChildren: () =>
+			import('./men-subitem/men-tshirt/men-tshirt.module').then(m => m.MenTshirtModule)
+	},
+	{
+		path: 'mens-casual-shirt', loadChildren: () =>
+			import('./men-subitem/men-casual-shirt/men-casual-shirt.module').then(m => m.MenCasualShirtModule)
+	},
+	{
+		path: 'mens-formal-shirt', loadChildren: () =>
+			import('./men-subitem/men-formal-shirt/men-formal-shirt.module').then(m => m.MenFormalShirtModule)
+	},
+	//sub category links
 	{
 		path: 'cart', loadChildren: () =>
 			import('./cart/cart.module').then(m => m.CartModule)
