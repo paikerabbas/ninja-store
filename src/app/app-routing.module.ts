@@ -47,6 +47,30 @@ const routes: Routes = [
 		path: 'mens-formal-shirt', loadChildren: () =>
 			import('./men-subitem/men-formal-shirt/men-formal-shirt.module').then(m => m.MenFormalShirtModule)
 	},
+	{
+		path: 'men-sweetshirts', loadChildren: () =>
+			import('./men-subitem/men-sweetshirts/men-sweetshirts.module').then(m => m.MenSweetshirtsModule)
+	},
+	{
+		path: 'men-sweaters', loadChildren: () =>
+			import('./men-subitem/men-sweaters/men-sweaters.module').then(m => m.MenSweatersModule)
+	},
+	{
+		path: 'men-jackets', loadChildren: () =>
+			import('./men-subitem/men-jackets/men-jackets.module').then(m => m.MenJacketsModule)
+	},
+	{
+		path: 'men-blazer', loadChildren: () =>
+			import('./men-subitem/men-blazer/men-blazer.module').then(m => m.MenBlazerModule)
+	},
+	{
+		path: 'men-suits', loadChildren: () =>
+			import('./men-subitem/men-suits/men-suits.module').then(m => m.MenSuitsModule)
+	},
+	{
+		path: 'men-rainjackets', loadChildren: () =>
+			import('./men-subitem/men-rainjackets/men-rainjackets.module').then(m => m.MenRainjacketsModule)
+	},
 	//sub category links
 	{
 		path: 'cart', loadChildren: () =>
