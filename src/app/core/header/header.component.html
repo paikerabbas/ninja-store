@@ -789,10 +789,10 @@
 <!-- Search Offcanvas Top  -->
 <div class="offcanvas offcanvas-top " style="height:100vh" tabindex="-3" id="signinOffcanvasTop"
 	aria-labelledby="signinOffcanvasTopLabel">
-	<div class="offcanvas-header">
-		<!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
-	</div>
-	<div class="offcanvas-body ">
+	<!-- <div class="offcanvas-header">
+		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div> -->
+	<div class="offcanvas-body p-0" style="overflow: hidden;">
 		<div class="d-flex login-container">
 
 			<div class="lp-left d-none d-lg-block">
@@ -806,7 +806,7 @@
 			<div class="lp-right">
 				<div class="row p-5 mx-0 signupform__div">
 					<div class="col">
-						<button type="button" class="btn-close" style="position: absolute;top: 0;right: 0;"
+						<button type="button" class="btn-close" style="position: absolute;top: 15px;right: 15px;"
 							data-bs-dismiss="offcanvas" aria-label="Close"></button>
 
 						<form [formGroup]="signinForm" (ngSubmit)="onSigninFormSubmit()" novalidate>
