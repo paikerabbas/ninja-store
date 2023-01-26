@@ -1,6 +1,8 @@
 import { Component, ElementRef, Input, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { MainService } from 'src/app/main.service';
 import { Subscription } from 'rxjs';
+import { FormBuilder, Validators } from '@angular/forms';
+import { AuthenticationService } from 'src/app/_services/authentication.service';
 
 @Component({
 	selector: 'app-header',
@@ -15,7 +17,11 @@ export class HeaderComponent implements OnInit {
 	subscription = new Subscription();
 
 
-	constructor(private mainService: MainService, private renderer: Renderer2, private elementRef: ElementRef) { }
+	constructor(private mainService: MainService,
+		private renderer: Renderer2,
+		private elementRef: ElementRef,
+		private fb: FormBuilder,
+		private authenticationService: AuthenticationService) { }
 
 	ngOnInit(): void {
 		this.getCartList();
@@ -35,6 +41,31 @@ export class HeaderComponent implements OnInit {
 			}
 		);
 		this.subscription.add(skuSub);
+	}
+
+	onSigninFormSubmit() {
+		if (this.signinForm.invalid) {
+			return;
+		}
+		// let user: User = this.signupForm.value as User;
+		console.log(this.signinForm.value)
+		this.authenticationService.authenticate(this.signinForm.value).subscribe(
+			data => {
+				alert(JSON.stringify(data));
+			}
+		);
+	}
+
+	signinForm = this.fb.group({
+		email: ['', [Validators.required]],
+		password: ['', [Validators.required]],
+	});
+
+	get email() {
+		return this.signinForm.get('email');
+	}
+	get password() {
+		return this.signinForm.get('password');
 	}
 
 	ngOnDestroy() {
