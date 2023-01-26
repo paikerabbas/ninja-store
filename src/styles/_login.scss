@@ -1,35 +1,36 @@
-
-.login-container{
-    height: calc(100vh - 67px);;
+.login-container {
+    height: calc(100vh - 67px);
+    ;
 }
-.lp-left{
+
+.lp-left {
 
     position: relative;
 
-    .overlay-container{
+    .overlay-container {
         width: 100%;
         height: 100%;
         position: absolute;
-        background-color: rgba(0,0,0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         top: 0;
         left: 0;
         bottom: 0;
     }
 
-    .welcome-div{
+    .welcome-div {
         color: white;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
 
-        p:first-child{
+        p:first-child {
             font-size: 5rem;
             font-weight: 700;
             line-height: 2rem;
         }
 
-        p:last-child{
+        p:last-child {
             font-size: 3rem;
             font-weight: 700;
             text-align: center;
@@ -37,13 +38,14 @@
 
     }
 
-    img{
+    img {
         width: 65vw;
         height: 100%;
     }
 }
 
-.lp-right{
+.lp-right {
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
