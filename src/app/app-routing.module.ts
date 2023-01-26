@@ -68,9 +68,26 @@ const routes: Routes = [
 			import('./men-subitem/men-suits/men-suits.module').then(m => m.MenSuitsModule)
 	},
 	{
+		path: 'men-kurtas', loadChildren: () =>
+			import('./men-subitem/men-kurtas/men-kurtas.module').then(m => m.MenKurtasModule)
+	},
+	
+	
+	{
 		path: 'men-rainjackets', loadChildren: () =>
 			import('./men-subitem/men-rainjackets/men-rainjackets.module').then(m => m.MenRainjacketsModule)
 	},
+	
+	{
+		path: 'men-sherwanis', loadChildren: () =>
+			import('./men-subitem/men-sherwanis/men-sherwanis.module').then(m => m.MenSherwanisModule)
+	},
+	{
+		path: 'men-dhotis', loadChildren: () =>
+			import('./men-subitem/men-dhotis/men-dhotis.module').then(m => m. MenDhotisModule)
+	},
+	
+	
 	//sub category links
 	{
 		path: 'cart', loadChildren: () =>
