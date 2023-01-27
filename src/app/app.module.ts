@@ -13,8 +13,9 @@ import { NotificationComponent } from './core/notification/notification.componen
 import { HeaderComponent } from './core/header/header.component';
 import { SigninPageComponent } from './core/signin-page/signin-page.component';
 import { SignupPage2Component } from './core/signup-page2/signup-page2.component';
-import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { SignupPageComponent } from './core/signup-page/signup-page.component';
+import { MenLinkAccordionComponent } from './core/header/men-link-accordion/men-link-accordion.component';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SignupPageComponent } from './core/signup-page/signup-page.component';
     SigninPageComponent,
     SignupPage2Component,
     SignupPageComponent,
+    MenLinkAccordionComponent,
   ],
   imports: [
     BrowserModule,

@@ -151,6 +151,68 @@
                 font-weight: 600;
             }
         }
+
+        .header__btn-coming-soon {
+            color: white;
+            background-color: var(--primary-bg);
+            border: none;
+            font-size: 0.6rem;
+            line-height: 10px;
+            border-radius: 2px;
+            padding: 2px 4px;
+            overflow: hidden;
+            position: relative;
+            margin-left: 15px;
+
+            &::after {
+                content: "";
+                background: #f1f1f1;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, .5);
+                -webkit-animation: headerBtnComingSoonFadeIn 0.8s infinite;
+                animation: headerBtnComingSoonFadeIn 0.8s infinite;
+            }
+        }
+    }
+
+    @-webkit-keyframes headerBtnComingSoonFadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        100% {
+            width: 200%;
+            padding-bottom: 200%;
+            opacity: 0;
+        }
+    }
+
+    @keyframes headerBtnComingSoonFadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        100% {
+            width: 200%;
+            padding-bottom: 200%;
+            opacity: 0;
+        }
     }
 
     .header__nav-item-account {
@@ -196,6 +258,20 @@
     }
 }
 
+
+
+.header__accordion-item {
+    border: none;
+
+    .header__accordion-item-button {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header__accordion-button-no-icon::after {
+        background-image: initial;
+    }
+}
 
 // @media(min-width: 576px) {}
 
