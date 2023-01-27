@@ -34,68 +34,96 @@ const routes: Routes = [
 		path: 'beauty', loadChildren: () =>
 			import('./beauty/beauty.module').then(m => m.BeautyModule)
 	},
-	//Men Sub Item links
+	//Men Topwear links
 	{
 		path: 'mens-tshirt', loadChildren: () =>
-			import('./men-subitem/men-tshirt/men-tshirt.module').then(m => m.MenTshirtModule)
+			import('./men-topwear/men-tshirt/men-tshirt.module').then(m => m.MenTshirtModule)
 	},
 	{
 		path: 'mens-casual-shirt', loadChildren: () =>
-			import('./men-subitem/men-casual-shirt/men-casual-shirt.module').then(m => m.MenCasualShirtModule)
+			import('./men-topwear/men-casual-shirt/men-casual-shirt.module').then(m => m.MenCasualShirtModule)
 	},
 	{
 		path: 'mens-formal-shirt', loadChildren: () =>
-			import('./men-subitem/men-formal-shirt/men-formal-shirt.module').then(m => m.MenFormalShirtModule)
+			import('./men-topwear/men-formal-shirt/men-formal-shirt.module').then(m => m.MenFormalShirtModule)
 	},
 	{
-		path: 'men-sweetshirts', loadChildren: () =>
-			import('./men-subitem/men-sweetshirts/men-sweetshirts.module').then(m => m.MenSweetshirtsModule)
+		path: 'men-sweatshirts', loadChildren: () =>
+			import('./men-topwear/men-sweatshirt/men-sweatshirt.module').then(m => m.MenSweatshirtModule)
 	},
 	{
 		path: 'men-sweaters', loadChildren: () =>
-			import('./men-subitem/men-sweaters/men-sweaters.module').then(m => m.MenSweatersModule)
+			import('./men-topwear/men-sweaters/men-sweaters.module').then(m => m.MenSweatersModule)
 	},
 	{
 		path: 'men-jackets', loadChildren: () =>
-			import('./men-subitem/men-jackets/men-jackets.module').then(m => m.MenJacketsModule)
+			import('./men-topwear/men-jackets/men-jackets.module').then(m => m.MenJacketsModule)
 	},
 	{
 		path: 'men-blazer', loadChildren: () =>
-			import('./men-subitem/men-blazer/men-blazer.module').then(m => m.MenBlazerModule)
+			import('./men-topwear/men-blazer/men-blazer.module').then(m => m.MenBlazerModule)
 	},
 	{
 		path: 'men-suits', loadChildren: () =>
-			import('./men-subitem/men-suits/men-suits.module').then(m => m.MenSuitsModule)
+			import('./men-topwear/men-suits/men-suits.module').then(m => m.MenSuitsModule)
 	},
-	{
-		path: 'men-kurtas', loadChildren: () =>
-			import('./men-subitem/men-kurtas/men-kurtas.module').then(m => m.MenKurtasModule)
-	},
-	
-	
 	{
 		path: 'men-rainjackets', loadChildren: () =>
-			import('./men-subitem/men-rainjackets/men-rainjackets.module').then(m => m.MenRainjacketsModule)
+			import('./men-topwear/men-rainjackets/men-rainjackets.module').then(m => m.MenRainjacketsModule)
 	},
-	
+
+	// Men Indian & Festive wear
+	{
+		path: 'men-kurtas', loadChildren: () =>
+			import('./men-festivewear/men-kurtas/men-kurtas.module').then(m => m.MenKurtasModule)
+	},
 	{
 		path: 'men-sherwanis', loadChildren: () =>
-			import('./men-subitem/men-sherwanis/men-sherwanis.module').then(m => m.MenSherwanisModule)
+			import('./men-festivewear/men-sherwanis/men-sherwanis.module').then(m => m.MenSherwanisModule)
 	},
 	{
 		path: 'men-dhotis', loadChildren: () =>
-			import('./men-subitem/men-dhotis/men-dhotis.module').then(m => m. MenDhotisModule)
+			import('./men-festivewear/men-dhotis/men-dhotis.module').then(m => m.MenDhotisModule)
 	},
-	
-	
+
+	// Men Bottom Wear links
+	{
+		path: 'men-jeans', loadChildren: () =>
+			import('./men-bottomwear/men-jeans/men-jeans.module').then(m => m.MenJeansModule)
+	},
+	{
+		path: 'men-casual-trouser', loadChildren: () =>
+			import('./men-bottomwear/men-casual-trouser/men-casual-trouser.module').then(m => m.MenCasualTrouserModule)
+	},
+	{
+		path: 'men-formal-trouser', loadChildren: () =>
+			import('./men-bottomwear/men-formal-trouser/men-formal-trouser.module').then(m => m.MenFormalTrouserModule)
+	},
+
+	// Men Footwear links
+	{
+		path: 'men-casual-shoes', loadChildren: () =>
+			import('./men-footwear/men-casualshoes/men-casualshoes.module').then(m => m.MenCasualshoesModule)
+	},
+	{
+		path: 'men-formal-shoes', loadChildren: () =>
+			import('./men-footwear/men-formalshoes/men-formalshoes.module').then(m => m.MenFormalshoesModule)
+	},
+	{
+		path: 'men-sports-shoes', loadChildren: () =>
+			import('./men-footwear/men-sportsshoes/men-sportsshoes.module').then(m => m.MenSportsshoesModule)
+	},
+
+	// Men watches link
+	{
+		path: 'men-watch', loadChildren: () =>
+			import('./men-watch/men-watch.module').then(m => m.MenWatchModule)
+	},
+
 	//sub category links
 	{
 		path: 'cart', loadChildren: () =>
 			import('./cart/cart.module').then(m => m.CartModule)
-	},
-	{
-		path: 'new-arival', loadChildren: () =>
-			import('./new-arival/new-arival.module').then(m => m.NewArivalModule)
 	},
 	{
 		path: 'order', loadChildren: () =>
@@ -120,22 +148,6 @@ const routes: Routes = [
 	{
 		path: 'product-detail', loadChildren: () =>
 			import('./product-detail/product-detail.module').then(m => m.ProductDetailModule)
-	},
-	{
-		path: 'men-wear', loadChildren: () =>
-			import('./men-wear/men-wear.module').then(m => m.MenWearModule)
-	},
-	{
-		path: 'men-footwear', loadChildren: () =>
-			import('./men-footwear/men-footwear.module').then(m => m.MenFootwearModule)
-	},
-	{
-		path: 'watch-accessories', loadChildren: () =>
-			import('./watch-accessories/watch-accessories.module').then(m => m.WatchAccessoriesModule)
-	},
-	{
-		path: 'women-wear', loadChildren: () =>
-			import('./women-wear/women-wear.module').then(m => m.WomenWearModule)
 	},
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent },
