@@ -274,6 +274,24 @@
     .header__accordion-button-no-icon::after {
         background-image: initial;
     }
+
+    .header__accordion-item-link {
+        padding-left: 15px;
+
+        a {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 2px;
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                font-weight: 600;
+            }
+        }
+    }
 }
 
 // @media(min-width: 576px) {}

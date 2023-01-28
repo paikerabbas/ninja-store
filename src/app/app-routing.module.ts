@@ -44,7 +44,7 @@ const routes: Routes = [
 			import('./men-topwear/men-casual-shirt/men-casual-shirt.module').then(m => m.MenCasualShirtModule)
 	},
 	{
-		path: 'mens-formal-shirt', loadChildren: () =>
+		path: 'men-formal-shirt', loadChildren: () =>
 			import('./men-topwear/men-formal-shirt/men-formal-shirt.module').then(m => m.MenFormalShirtModule)
 	},
 	{
@@ -88,7 +88,7 @@ const routes: Routes = [
 
 	// Men Bottom Wear links
 	{
-		path: 'men-jean', loadChildren: () =>
+		path: 'men-jeans', loadChildren: () =>
 			import('./men-bottomwear/men-jeans/men-jeans.module').then(m => m.MenJeansModule)
 	},
 	{
